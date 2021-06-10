@@ -1,0 +1,8 @@
+@mixin h2_txt($fs, $ls) {
+  line-height: 1.5;
+  font-size: $fs;
+  letter-spacing: $ls;
+  font-family: "Raleway-Medium";
+  font-weight: 700;
+  color: #efbb35;
+}

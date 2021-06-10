@@ -1,0 +1,107 @@
+@import "../../../styles/default.scss";
+.about {
+  width: 100%;
+  overflow: hidden;
+  background: #252934;
+  background: linear-gradient(to right, #252934, #222831);
+
+  display: flex;
+  flex-direction: column;
+  h2 {
+    @include h2_txt(32px, 4px);
+  }
+
+  &__text {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  &__image_container {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    margin-left: 32px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.added_span {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  user-select: none;
+  margin: 15px 0;
+}
+
+.add_span, .line {
+  font-family: "Raleway-Regular";
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+.about__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.about__text_body {
+  display: flex;
+  margin-top: 32px;
+}
+
+.line_l {
+  width: 10%;
+  background: #efbb35;
+  height: 3px;
+  flex-shrink: 0;
+  margin-right: 16px;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 1400px) {
+  .about__text_body {
+    margin-top: 16px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about__text {
+    width: 65%;
+  }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .line_l {
+    display: none;
+  }
+  .about__text {
+    width: 100%;
+  }
+  .about {
+    position: relative;
+  }
+  .add_span,
+  .line {
+    font-size: 14px;
+    margin-right: 8px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .add_span,
+  .line {
+    font-size: 13px;
+    margin-right: 6px;
+  }
+}

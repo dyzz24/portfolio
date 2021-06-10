@@ -28,6 +28,13 @@ h2 {
   animation: anim_span 0.6s linear infinite alternate;
 }
 
+main,
+header,
+section,
+footer {
+  width: 100%;
+}
+
 
 @keyframes anim_span {
   from {
@@ -37,3 +44,6 @@ h2 {
     opacity: 1;
   }
 }
+
+$main_color: rgb(236, 228, 228);
+

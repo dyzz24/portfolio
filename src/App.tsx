@@ -1,9 +1,11 @@
 import React, {useRef} from 'react';
-
 import './App.scss';
 import {Preloader} from "./components/preloader";
 import {ProgressScroll} from "./components/progress-scroll";
-import {Header} from "./components/header";
+import {HashRouter, Switch, Route} from "react-router-dom";
+import {MainPage} from "./components/main-page";
+import {Routes} from "./routes";
+
 
 function App() {
   const mainRef = useRef<HTMLDivElement | null>(null);
@@ -11,8 +13,12 @@ function App() {
   return (
       <main ref={mainRef}>
         <ProgressScroll mainRef={mainRef}/>
-        <Header/>
-    <Preloader/>
+        <HashRouter>
+            <Switch>
+                <Route exact path={Routes.MAIN} component={MainPage}/>
+            </Switch>
+        </HashRouter>
+        <Preloader/>
       </main>
   );
 }

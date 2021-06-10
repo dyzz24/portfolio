@@ -1,6 +1,6 @@
 import React, {createRef, useEffect, useMemo, useRef} from "react";
 import styles from './header.module.scss';
-import {generateId} from "../../utils/generate-id";
+import {generateId} from "../../../utils/generate-id";
 
 const firstRow = [
     {text: 'H'},
