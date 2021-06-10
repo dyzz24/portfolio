@@ -13,7 +13,11 @@ const firstRow = [
 
 const secondRow = [{text: 'I'}, {text: ''}, {text: 'a'}, {text: 'm'}];
 const thirdRow = [{text: 'V'},{text: 'a'},{text: 's'},{text: 'i'},{text: 'l'},{text: 'k'},{text: 'o'},{text: 'v'},
-    {text: ''},{text: 'D'},{text: 'm'},{text: 'i'},{text: 't'},{text: 'r'},{text: 'y'},]
+    {text: ''},{text: 'D'},{text: 'm'},{text: 'i'},{text: 't'},{text: 'r'},{text: 'y'},];
+
+const fourthRow = [{text: 'F'},{text: 'r'},{text: 'o'},{text: 'n'},{text: 't'},{text: 'e'},{text: 'n'},
+    {text: 'd'},{text: '_', className: 'anim_span'},{text: 'd'},{text: 'e'},{text: 'v'},{text: 'e'},{text: 'l'},{text: 'o'},
+    {text: 'p'},{text: 'e'},{text: 'r'}]
 
 let counter = 0;
 let increment = 1;
@@ -32,12 +36,20 @@ export const Header = () => {
         () => Array.from({ length: 15 }).map(() => createRef()),
         []
     );
+    const fourthRefsCollection: Array<React.RefObject<HTMLDivElement>> = useMemo(
+        () => Array.from({ length: 18 }).map(() => createRef()),
+        []
+    );
 
-    const letterRefsCollection = [...firstRefsCollection, ...secondRefsCollection, ...thirdRefsCollection]
+    const letterRefsCollection = [...firstRefsCollection, ...secondRefsCollection, ...thirdRefsCollection, ...fourthRefsCollection];
 
     const spanAnim = () => {
         if(!headerRef.current) return;
         const coordinateTop = headerRef.current.getBoundingClientRect().top;
+        const coordinateBottom = headerRef.current.getBoundingClientRect().bottom;
+
+        if(coordinateBottom < 100) return;
+
         
         if (coordinateTop < 0) {
             if (counter < letterRefsCollection.length - 1) {
@@ -96,28 +108,12 @@ export const Header = () => {
         </div>
 
         <div className={styles.span_classes + ' ' + styles.colored}>
-            {thirdRow.map((el, idx) => <span ref={secondRefsCollection[idx]} key={generateId(10)}>{el.text}</span>)}
+            {thirdRow.map((el, idx) => <span ref={thirdRefsCollection[idx]} key={generateId(10)}>{el.text}</span>)}
 
         </div>
         <div className={styles.span_classes}>
-            <span className='header_spans'>F</span>
-            <span className='header_spans'>r</span>
-            <span className='header_spans'>o</span>
-            <span className='header_spans'>n</span>
-            <span className='header_spans'>t</span>
-            <span className='header_spans'>e</span>
-            <span className='header_spans'>n</span>
-            <span className='header_spans'>d</span>
-            <span className='header_spans anim_span'>_</span>
-            <span className='header_spans'>d</span>
-            <span className='header_spans'>e</span>
-            <span className='header_spans'>v</span>
-            <span className='header_spans'>e</span>
-            <span className='header_spans'>l</span>
-            <span className='header_spans'>o</span>
-            <span className='header_spans'>p</span>
-            <span className='header_spans'>e</span>
-            <span className='header_spans'>r</span>
+            {fourthRow.map((el, idx) => <span ref={fourthRefsCollection[idx]} className={el.className || ''} key={generateId(10)}>{el.text}</span>)}
+
         </div>
     </header>
 }

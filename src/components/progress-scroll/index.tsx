@@ -32,6 +32,7 @@ export const ProgressScroll: React.FC<{mainRef: React.MutableRefObject<HTMLDivEl
 
         } else {
             const percent = (current_scroll_position * 100) / max_screen_main;
+
             requestAnimationFrame(() => {
                 if(progressScrollRef.current) {
                     progressScrollRef.current.style.width = percent + "%";
