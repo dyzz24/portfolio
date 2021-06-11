@@ -10,6 +10,9 @@
   section {
     @include paddings(100px, 140px);
   }
+  .separator {
+    height: 130px;
+  }
 }
 
 
@@ -22,6 +25,13 @@
   }
   section {
     @include paddings(80px, 100px);
+  }
+  h2,
+  .separator h2 {
+    font-size: 30px;
+  }
+  .separator {
+    height: 110px;
   }
 }
 
@@ -45,11 +55,22 @@
   .text_block {
     font-size: 16px;
   }
+  header span,
+  header .colored span {
+    font-size: 40px;
+  }
 }
 
 @media screen and (max-width: 900px) {
   section {
     @include paddings(40px, 40px);
+  }
+  h2,
+  .separator h2 {
+    font-size: 26px;
+  }
+  .separator {
+    height: 80px;
   }
 }
 
@@ -57,6 +78,12 @@
 
 
 @media screen and (max-width: 768px) {
+
+  header span,
+  header .colored span {
+    font-size: 32px;
+    padding: 0 4px;
+  }
 
   section {
     @include paddings(20px, 10px);
@@ -81,6 +108,10 @@
     margin-bottom: 12px;
     line-height: 24px;
   }
+  h2,
+  .separator h2 {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -88,5 +119,33 @@
   .line {
     font-size: 13px;
     margin-right: 6px;
+  }
+
+  header span,
+  header .colored span {
+    font-size: 28px;
+    padding: 0 2px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  h2,
+  .separator h2 {
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  .separator {
+    margin-top: 12px;
+  }
+
+  header {
+    height: 50vh;
+  }
+  header span,
+  header .colored span {
+    font-size: 24px;
+    padding: 0 2px;
   }
 }

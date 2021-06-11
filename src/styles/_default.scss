@@ -12,7 +12,17 @@
   padding: $tops $lefts;
 }
 
+@mixin h2_txt($fs, $ls) {
+  line-height: 1.5;
+  font-size: $fs;
+  letter-spacing: $ls;
+  font-family: "Raleway-Medium";
+  font-weight: 700;
+  color: #efbb35;
+}
+
 section {
   @include paddings(144px, 260px);
   box-sizing: border-box;
 }
+
