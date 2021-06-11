@@ -6,3 +6,13 @@
   font-weight: 700;
   color: #efbb35;
 }
+
+@mixin paddings($tops, $lefts) {
+  box-sizing: border-box;
+  padding: $tops $lefts;
+}
+
+section {
+  @include paddings(144px, 260px);
+  box-sizing: border-box;
+}

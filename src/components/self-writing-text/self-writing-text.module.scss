@@ -1,0 +1,19 @@
+.added_span {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  user-select: none;
+  margin: 15px 0;
+
+}
+
+.empty {
+  padding: 3px;
+}
+
+.add_span, .line {
+  font-family: "Raleway-Regular";
+  font-size: 18px;
+  margin-right: 6px;
+}

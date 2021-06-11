@@ -1,4 +1,4 @@
-@import "../../../styles/default.scss";
+@import "../../../styles/default.scss", '../../../styles/adaptive.scss';
 .about {
   width: 100%;
   overflow: hidden;
@@ -32,20 +32,7 @@
   }
 }
 
-.added_span {
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  user-select: none;
-  margin: 15px 0;
-}
 
-.add_span, .line {
-  font-family: "Raleway-Regular";
-  font-size: 18px;
-  margin-right: 6px;
-}
 
 .about__wrapper {
   display: flex;
@@ -66,42 +53,16 @@
   margin-top: 16px;
 }
 
-@media screen and (max-width: 1400px) {
-  .about__text_body {
-    margin-top: 16px;
-  }
-}
+.text_block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway-Regular";
+  font-size: 20px;
+  color: rgb(236, 228, 228);
+  line-height: 1.3;
 
-@media screen and (max-width: 1024px) {
-  .about__text {
-    width: 65%;
-  }
-}
-
-
-
-
-@media screen and (max-width: 768px) {
-  .line_l {
-    display: none;
-  }
-  .about__text {
-    width: 100%;
-  }
-  .about {
-    position: relative;
-  }
-  .add_span,
-  .line {
-    font-size: 14px;
-    margin-right: 8px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .add_span,
-  .line {
-    font-size: 13px;
-    margin-right: 6px;
+  span {
+    margin-bottom: 16px;
   }
 }

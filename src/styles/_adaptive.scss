@@ -1,0 +1,92 @@
+@import "./default";
+
+@media screen and (max-width: 1680px) {
+  section {
+    @include paddings(100px, 180px);
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  section {
+    @include paddings(100px, 140px);
+  }
+}
+
+
+@media screen and (max-width: 1400px) {
+  .about__text_body {
+    margin-top: 16px;
+  }
+  .text_block {
+    font-size: 18px;
+  }
+  section {
+    @include paddings(80px, 100px);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .text_block p {
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  section {
+    @include paddings(80px, 60px);
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .about__text {
+    width: 65%;
+  }
+  .text_block {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  section {
+    @include paddings(40px, 40px);
+  }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+  section {
+    @include paddings(20px, 10px);
+  }
+
+  .line_l {
+    display: none;
+  }
+  .about__text {
+    width: 100%;
+  }
+  .about {
+    position: relative;
+  }
+  .add_span,
+  .line {
+    font-size: 14px;
+    margin-right: 8px;
+  }
+
+  .text_block p {
+    margin-bottom: 12px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .add_span,
+  .line {
+    font-size: 13px;
+    margin-right: 6px;
+  }
+}

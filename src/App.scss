@@ -4,8 +4,29 @@ body {
 }
 
 a {
+  outline: none;
   text-decoration: none;
+  color: white;
 }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
 
 main {
   width: 100%;
@@ -36,6 +57,7 @@ footer {
 }
 
 
+
 @keyframes anim_span {
   from {
     opacity: 0;
@@ -43,6 +65,36 @@ footer {
   to {
     opacity: 1;
   }
+}
+
+@font-face {
+  font-family: "Raleway-SemiBoldItalic";
+  src: url("./fonts/Raleway-SemiBoldItalic.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway-Regular";
+  src: url("./fonts/Raleway-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url("./fonts/Raleway-Bold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway-Medium";
+  src: url("./fonts/Raleway-Medium.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FuturaPT-Heavy";
+  src: url("./fonts/FuturaPT-Heavy.ttf");
+  font-display: swap;
 }
 
 $main_color: rgb(236, 228, 228);
