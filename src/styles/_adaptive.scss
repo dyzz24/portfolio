@@ -61,6 +61,24 @@
     font-size: 20px;
     margin-bottom: 10px;
   }
+
+  .experience__more p {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .experience__name {
+    h2 {
+      font-size: 22px;
+    }
+    span {
+      font-size: 16px;
+    }
+  }
+
+  .skills_row .name {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -158,6 +176,33 @@
       opacity: 1;
     }
   }
+
+  .all_skills {
+    padding-left: 40px;
+  }
+
+
+  .text_title {
+    margin-top: 4px;
+    font-size: 18px;
+  }
+  .experience__more p {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .experience__name {
+    h2 {
+      font-size: 20px;
+    }
+    span {
+      font-size: 14px;
+    }
+  }
+
+  .skills_row .name {
+    font-size: 14px;
+  }
 }
 
 
@@ -198,9 +243,61 @@
   .separator h2 {
     font-size: 20px;
   }
+
+  .experience__name h2,
+  .experience__name span {
+    text-align: center;
+  }
+
+  .experience__more h3 {
+    margin-bottom: 6px;
+  }
+
+
+  .all_skills {
+    padding-left: 10px;
+  }
+
+  .my_skills {
+    height: auto;
+  }
+
+  .experience__name {
+    width: 200px;
+    border-top: 2px solid #e3e3e3;
+  }
+
+  .experience__row:first-child .experience__name {
+    border-top: 0px solid #e3e3e3;
+  }
+
+  .experience__runner {
+    margin: 0 6px;
+  }
+
+  .experience__circle {
+    width: 10px;
+    height: 10px;
+    margin: 12px 0;
+  }
+  .experience__line {
+    width: 1px;
+  }
+
+  .skills_row .fill {
+    width: 100%;
+  }
+
 }
 
 @media screen and (max-width: 600px) {
+
+  .experience__name h2, .experience__more h3 {
+    font-size: 18px !important;
+  }
+
+
+
   .work_section {
     padding-top: 0px;
   }
@@ -210,6 +307,41 @@
   .experience__name {
     width: 100%;
   }
+
+  .experience__row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  .experience__name h2, .experience__name span {
+    text-align: left;
+  }
+
+  .experience__more {
+    border-top: 0px;
+    padding: 0;
+
+    &:last-child {
+      border-bottom: 0px solid #1d3e5f;
+    }
+  }
+
+  .menu {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hidden_menu {
+    top: 60px;
+    width: 60px;
+  }
+
+  .menu span {
+    width: 25px;
+  }
+
+
 }
 
 
@@ -238,6 +370,8 @@
   .work__prev {
     height: 270px;
   }
+
+
 
 }
 
