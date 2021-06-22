@@ -4,6 +4,13 @@
   section {
     @include paddings(100px, 180px);
   }
+
+  .work__prev {
+    width: 40%;
+    height: 310px;
+    margin-right: 5%;
+    margin-top: 5%;
+  }
 }
 
 @media screen and (max-width: 1500px) {
@@ -33,11 +40,36 @@
   .separator {
     height: 110px;
   }
+
+  .work__prev {
+    margin-right: 2.5%;
+    margin-top: 2.5%;
+    height: 300px;
+
+    .work_tech_block {
+      font-size: 20px;
+    }
+  }
+
+  .work_title {
+    font-size: 13px;
+    height: 25px;
+    line-height: 25px;
+  }
+
+  .experience__more h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 1280px) {
   .text_block p {
     margin-bottom: 12px;
+  }
+
+  .work__prev {
+    height: 260px;
   }
 }
 
@@ -49,6 +81,9 @@
 
 
 @media screen and (max-width: 1024px) {
+  .work_section {
+    justify-content: space-between;
+  }
   .about__text {
     width: 65%;
   }
@@ -58,6 +93,11 @@
   header span,
   header .colored span {
     font-size: 40px;
+  }
+
+  .work__prev {
+    width: 47.5%;
+    height: 280px;
   }
 }
 
@@ -71,6 +111,52 @@
   }
   .separator {
     height: 80px;
+  }
+
+  .work_section {
+    justify-content: center;
+  }
+
+  .work__prev .work_tech_block,
+  .experience__more h3 {
+    font-size: 18px;
+  }
+
+  .work__prev {
+    width: 85%;
+    height: 310px;
+    margin-top: 24px;
+    box-shadow: none;
+
+    &.blured {
+      opacity: 1;
+    }
+
+    &::before {
+      display: block;
+      opacity: 0.7;
+    }
+
+    &:hover {
+      box-shadow: none;
+      opacity: 1;
+    }
+    &:hover:not(.active) .work_btn {
+      opacity: 1;
+      animation: none;
+    }
+    &:hover .work_tech_block {
+      opacity: 1;
+      animation: none;
+    }
+
+    .work_tech_block {
+      opacity: 1;
+    }
+
+    .work_btn {
+      opacity: 1;
+    }
   }
 }
 
@@ -114,6 +200,19 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .work_section {
+    padding-top: 0px;
+  }
+  .work__prev {
+    width: 95%;
+  }
+  .experience__name {
+    width: 100%;
+  }
+}
+
+
 @media screen and (max-width: 500px) {
   .add_span,
   .line {
@@ -126,6 +225,20 @@
     font-size: 28px;
     padding: 0 2px;
   }
+
+  .work__prev .work_tech_block,
+  .experience__more h3 {
+    font-size: 16px;
+  }
+
+  .work_btn {
+    background: #efbb35;
+  }
+
+  .work__prev {
+    height: 270px;
+  }
+
 }
 
 @media screen and (max-width: 440px) {
@@ -148,4 +261,14 @@
     font-size: 24px;
     padding: 0 2px;
   }
+
+  .work__prev {
+    height: 230px;
+    width: 100%;
+  }
+
+  .work_btn {
+    font-size: 14px;
+  }
+
 }
