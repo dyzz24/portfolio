@@ -6,6 +6,7 @@ import {HashRouter, Switch, Route} from "react-router-dom";
 import {MainPage} from "./components/main-page";
 import {Routes} from "./routes";
 import {Footer} from "./components/footer";
+import {WorksPageSelector} from "./components/works-page-selector";
 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
         <HashRouter>
             <Switch>
                 <Route exact path={Routes.MAIN} component={MainPage}/>
+                <Route  path={'/:id'} component={WorksPageSelector}/>
+
+
             </Switch>
         </HashRouter>
         <Preloader/>
