@@ -1,6 +1,7 @@
 import React from "react";
 import './works.scss';
 import { Link } from 'react-router-dom';
+import {IWithRefChildren} from "../index";
 
 
 const worksConfig = [{
@@ -58,8 +59,8 @@ const worksConfig = [{
     },
 ]
 
-export const Works = () => {
-    return <section className='work_section' id='work_section'>
+export const Works:  React.FC<IWithRefChildren>  = ({refElement}) => {
+    return <section className='work_section' ref={refElement}>
         {
             worksConfig.map(el =>
                 <div className={"work__prev " + el.addingClassName} key={el.addingClassName}>

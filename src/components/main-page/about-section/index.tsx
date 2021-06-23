@@ -1,8 +1,9 @@
 import React from "react";
 import './about.scss';
 import {SelfWritingText} from "../../self-writing-text";
+import {IWithRefChildren} from "../index";
 
-export const AboutSection = () => {
+export const AboutSection: React.FC<IWithRefChildren> = ({refElement}) => {
 
     const arrayOfStrings = [
         "Разрабатываю сложные WEB-приложения",
@@ -10,7 +11,7 @@ export const AboutSection = () => {
         "...TS, ES6, RxJs, websockets, REST API, redux, effector, webpack, gulp",
     ];
 
-    return <section className='about' id='about_me'>
+    return <section className='about' ref={refElement}>
         <h2>Обо мне</h2>
         <SelfWritingText arrayOfStrings={arrayOfStrings}/>
         <div className="about__wrapper">

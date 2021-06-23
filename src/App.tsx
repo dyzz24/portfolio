@@ -5,6 +5,7 @@ import {ProgressScroll} from "./components/progress-scroll";
 import {HashRouter, Switch, Route} from "react-router-dom";
 import {MainPage} from "./components/main-page";
 import {Routes} from "./routes";
+import {Footer} from "./components/footer";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             </Switch>
         </HashRouter>
         <Preloader/>
+        <Footer/>
       </main>
   );
 }

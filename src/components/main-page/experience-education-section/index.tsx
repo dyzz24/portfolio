@@ -1,5 +1,7 @@
 import React, {createRef, useEffect, useMemo, useRef} from "react";
 import './experience-education-section.scss';
+import {useUnobserve} from "../../../hooks/use-unobserve";
+import {IWithRefChildren} from "../index";
 
 
 const experienceConfig = [{
@@ -64,7 +66,7 @@ const createMarkup = (html: string) => {
 }
 
 let observer: IntersectionObserver | null = null;
-export const ExperienceEducationSection = () => {
+export const ExperienceEducationSection: React.FC<IWithRefChildren> = ({refElement}) => {
     const refCirclesCollection: Array<React.RefObject<HTMLDivElement>> = useMemo(
         () => Array.from({ length: experienceConfig.length }).map(() => createRef()),
         []
@@ -77,6 +79,8 @@ export const ExperienceEducationSection = () => {
         () => Array.from({ length: experienceConfig.length }).map(() => createRef()),
         []
     );
+
+    useUnobserve(refParentsCollection, observer);
 
     useEffect(() => {
         if(refParentsCollection.length) {
@@ -112,22 +116,11 @@ export const ExperienceEducationSection = () => {
         }
     }, [refParentsCollection.length])
 
-    useEffect(() => {
-        return () => {
-            if(refParentsCollection.length && observer) {
-                refParentsCollection.forEach(parentElement => {
-                    if(parentElement.current) {
-                        observer?.unobserve(parentElement.current)
-                    }
-                });
-            }
-        }
-    }, [])
 
 
 
     
-    return <section className='experience' id='experience_m'>
+    return <section className='experience' ref={refElement}>
         {experienceConfig.map((el, idx) => <div key={el.companyName} className="experience__row line_anim" data-idx={idx}
                                                 ref={refParentsCollection[idx]}
         >

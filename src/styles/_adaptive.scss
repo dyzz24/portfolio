@@ -1,5 +1,28 @@
 @import "./default";
 
+.all_skills {
+  width: 480px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 260px;
+  padding-right: 36px;
+  flex-shrink: 0;
+  z-index: 4;
+}
+
+.my_skills {
+  width: 100%;
+  height: auto;
+  padding: 150px 80px;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 1680px) {
   section {
     @include paddings(100px, 180px);
@@ -11,9 +34,18 @@
     margin-right: 5%;
     margin-top: 5%;
   }
+
+  .all_skills {
+    padding-left: 180px;
+  }
 }
 
 @media screen and (max-width: 1500px) {
+
+  .all_skills {
+    padding-left: 140px;
+  }
+
   section {
     @include paddings(100px, 140px);
   }
@@ -24,6 +56,11 @@
 
 
 @media screen and (max-width: 1400px) {
+
+  .all_skills {
+    padding-left: 100px;
+  }
+
   .about__text_body {
     margin-top: 16px;
   }
@@ -95,6 +132,11 @@
   section {
     @include paddings(80px, 60px);
   }
+
+  .all_skills {
+    padding-left: 60px;
+  }
+
 }
 
 
@@ -120,6 +162,36 @@
 }
 
 @media screen and (max-width: 900px) {
+
+
+  .my_skills {
+    position: relative;
+    padding: 20px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .right_skills_block {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    overflow: visible;
+    z-index: 2;
+    opacity: 0.3;
+  }
+
+  .all_skills {
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 40px;
+
+  }
+
   section {
     @include paddings(40px, 40px);
   }
@@ -177,9 +249,7 @@
     }
   }
 
-  .all_skills {
-    padding-left: 40px;
-  }
+
 
 
   .text_title {
@@ -209,6 +279,24 @@
 
 
 @media screen and (max-width: 768px) {
+
+  .right_skills_block {
+    top: 25%;
+  }
+
+
+
+  .right_skills_block {
+    z-index: 1;
+  }
+
+  .skills_row {
+    height: 26px;
+  }
+
+  .all_skills {
+    z-index: 2;
+  }
 
   header span,
   header .colored span {
@@ -376,6 +464,21 @@
 }
 
 @media screen and (max-width: 440px) {
+
+  .skills_row .name {
+    font-size: 12px;
+    width: 120px;
+  }
+  .skills_row {
+    margin-bottom: 8px;
+  }
+
+
+  .skills_row span {
+    line-height: 26px;
+    font-size: 14px;
+  }
+
   h2,
   .separator h2 {
     font-size: 18px;
@@ -406,3 +509,11 @@
   }
 
 }
+
+@media screen and (max-width: 440px) {
+  .skills_row .name {
+    font-size: 11px;
+    width: 100px;
+  }
+}
+

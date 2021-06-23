@@ -1,6 +1,7 @@
 import React, {createRef, useEffect, useMemo, useRef} from "react";
 import styles from './header.module.scss';
 import {generateId} from "../../../utils/generate-id";
+import {IWithRefChildren} from "../index";
 
 const firstRow = [
     {text: 'H'},
@@ -21,9 +22,9 @@ const fourthRow = [{text: 'F'},{text: 'r'},{text: 'o'},{text: 'n'},{text: 't'},{
 
 let counter = 0;
 let increment = 1;
-export const Header = () => {
+export const Header: React.FC<IWithRefChildren> = ({refElement}) => {
 
-    const headerRef = useRef<HTMLDivElement | null>(null);
+
     const firstRefsCollection: Array<React.RefObject<HTMLDivElement>> = useMemo(
         () => Array.from({ length: 6 }).map(() => createRef()),
         []
@@ -44,9 +45,9 @@ export const Header = () => {
     const letterRefsCollection = [...firstRefsCollection, ...secondRefsCollection, ...thirdRefsCollection, ...fourthRefsCollection];
 
     const spanAnim = () => {
-        if(!headerRef.current) return;
-        const coordinateTop = headerRef.current.getBoundingClientRect().top;
-        const coordinateBottom = headerRef.current.getBoundingClientRect().bottom;
+        if(!refElement.current) return;
+        const coordinateTop = refElement.current.getBoundingClientRect().top;
+        const coordinateBottom = refElement.current.getBoundingClientRect().bottom;
 
         if(coordinateBottom < 100) return;
 
@@ -98,7 +99,7 @@ export const Header = () => {
 
 
 
-    return <header id='start' ref={headerRef}>
+    return <header id='start' ref={refElement}>
         <div className={styles.span_classes}>
             {firstRow.map((el, idx) => <span ref={firstRefsCollection[idx]} className={el.className || ''} key={generateId(10)}>{el.text}</span>)}
         </div>
