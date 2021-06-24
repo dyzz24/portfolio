@@ -1,5 +1,10 @@
 @import "./default";
 
+section {
+  @include paddings(144px, 260px);
+  box-sizing: border-box;
+}
+
 .all_skills {
   width: 480px;
   height: 100%;

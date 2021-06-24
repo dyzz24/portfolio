@@ -20,7 +20,7 @@ const worksConfig = [
     },
     {
         name: 'SPA (angular 6) Global System Monitoring',
-        linkTo: 'ff',
+        linkTo: Routes.GSM,
         addingClassName: 'gsm'
     },
     {

@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
 import './App.scss';
+import './styles/_adaptive.scss';
 import {Preloader} from "./components/preloader";
 import {ProgressScroll} from "./components/progress-scroll";
 import {HashRouter, Switch, Route} from "react-router-dom";
