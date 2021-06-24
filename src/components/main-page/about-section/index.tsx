@@ -2,6 +2,7 @@ import React from "react";
 import './about.scss';
 import {SelfWritingText} from "../../self-writing-text";
 import {IWithRefChildren} from "../index";
+import '../../../styles/_adaptive.scss';
 
 export const AboutSection: React.FC<IWithRefChildren> = ({refElement}) => {
 

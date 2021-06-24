@@ -59,6 +59,7 @@ $main-text-color: rgb(240, 238, 238);
   width: 100%;
   height: 100%;
   transition: 0.4s;
+  transition-timing-function: ease-out;
   display: flex;
   user-select: none;
 }
@@ -78,90 +79,6 @@ $main-text-color: rgb(240, 238, 238);
     width: 100%;
   }
 }
-//.crm_start_screen {
-//  background: url("../img/start_screen.jpg") no-repeat center;
-//  background-size: contain;
-//}
-//
-//.crm_new_msg {
-//  background: url("../img/screen_new_msg.jpg") no-repeat center;
-//  background-size: contain;
-//}
-//
-//.crm_view {
-//  background: url("../img/screen_view.jpg") no-repeat center;
-//  background-size: contain;
-//}
-//
-//.masterscada {
-//  background: url("../img/masterscada_screen.jpg") no-repeat center;
-//  background-size: auto 100%;
-//}
-//
-//.masteropc {
-//  background: url("../img/masteropc_screen.jpg") no-repeat center;
-//  background-size: 100% auto;
-//}
-//
-//.masterscada_pwa {
-//  background: url("../img/masterscada_pwa.jpg") no-repeat center;
-//  background-size: contain;
-//}
-//
-//.kingdy {
-//  background: url("../img/kingdy_screen.jpg") no-repeat center;
-//  background-size: 100% auto;
-//}
-//
-//.kingdy_prev {
-//  background: url("../img/kingdy.jpg") no-repeat center;
-//  background-size: 100% auto;
-//}
-//
-//.musicshop {
-//  background: url("../img/musicshop_screen.jpg") no-repeat center;
-//  background-size: 100% auto;
-//}
-//.cw_slide0 {
-//  background: url("../img/cw_title.png") no-repeat center;
-//  background-size: contain;
-//}
-//.cw_slide1 {
-//  background: url("../img/slide1.png") no-repeat center;
-//  background-size: contain;
-//}
-//.cw_slide2 {
-//  background: url("../img/slide2.png") no-repeat center;
-//  background-size: contain;
-//}
-//
-//.cw_slide3 {
-//  background: url("../img/slide3.png") no-repeat center;
-//  background-size: contain;
-//}
-//
-//.cw_slide4 {
-//  background: url("../img/slide4.png") no-repeat center;
-//  background-size: contain;
-//}
-//
-//.cw_slide5 {
-//  background: url("../img/slide5.png") no-repeat center;
-//  background-size: contain;
-//}
-//
-//.goodok_slide1 {
-//  background: url("../img/goodok_slide1.jpg") no-repeat center;
-//  background-size: 100% 100%;
-//}
-//.goodok_slide2 {
-//  background: url("../img/goodok_slide2.jpg") no-repeat center;
-//  background-size: 100% 100%;
-//}
-//.goodok_slide3 {
-//  background: url("../img/goodok_slide3.jpg") no-repeat center;
-//  background-size: 100% 100%;
-//}
 
 .other {
   height: 100vh;
@@ -177,6 +94,8 @@ $main-text-color: rgb(240, 238, 238);
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.4s;
+  z-index: 2;
 
   svg {
     fill-opacity: 0;
@@ -190,7 +109,7 @@ $main-text-color: rgb(240, 238, 238);
 
 .slider__control_left {
   left: 0;
-  transition: 0.4s;
+
 
   &:hover {
     background: #252934;
@@ -300,17 +219,17 @@ video {
     //   box-shadow: 1px 1px 1px 1px #efbb35;
   }
 
-  //.hidden_arrow {
-  //  position: absolute;
-  //  top: 0;
-  //  left: 0;
-  //  width: 100%;
-  //  height: 100%;
-  //  background: url("../img/dotted-left-arrow.svg") no-repeat center;
-  //  background-size: 100% 100%;
-  //  transition: 0.4s;
-  //  opacity: 0;
-  //}
+  .hidden_arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../../img/dotted-left-arrow.svg") no-repeat center;
+    background-size: 100% 100%;
+    transition: 0.4s;
+    opacity: 0;
+  }
 
   &:hover i {
     visibility: hidden;
@@ -394,6 +313,10 @@ video {
     position: relative;
     color: rgb(250, 248, 249);
     letter-spacing: 2px;
+    max-width: 150px;
+    overflow: hidden;
+    padding: 0 12px;
+    box-sizing: border-box;
   }
 
   &:hover::before {
@@ -590,7 +513,7 @@ footer {
   }
 
   h2 {
-    width: 80%;
+
     font-size: 20px;
     letter-spacing: 2px;
   }
@@ -640,7 +563,7 @@ footer {
 
   .work__info,
   footer {
-    padding: 15px 10px;
+    padding: 25px 15px;
   }
 
   .main_text {

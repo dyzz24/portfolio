@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import './menu.scss';
 
 export const Menu: React.FC<IMenu> = ({aboutRef, experienceRef , headerRef , skillsRef , worksRef}) => {
@@ -13,6 +13,20 @@ export const Menu: React.FC<IMenu> = ({aboutRef, experienceRef , headerRef , ski
             setOpen(false);
         }
     }
+
+    const isOpenHandler = (e: MouseEvent) => {
+        const target = e.target as HTMLDivElement;
+        if(target.classList.contains('menu') || target.classList.contains('hidden_menu')) {
+            return
+        } else setOpen(false);
+    }
+
+    useEffect(() => {
+        if(open) {
+            window.addEventListener('click', isOpenHandler, {once: true})
+        } else window.removeEventListener('click', isOpenHandler)
+
+    }, [open])
 
     return <>
     <div className="menu" onClick={() => setOpen(!open)}>

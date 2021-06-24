@@ -1,19 +1,21 @@
 import React from "react";
 import './works.scss';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {IWithRefChildren} from "../index";
+import {Routes} from "../../../routes";
 
 
-const worksConfig = [{
-    activeTitle: 'Запущена beta версия',
+const worksConfig = [
+    {
+    activeTitle: 'Выпущен в прод',
     name: 'Музыкальный сервис GOOD\'OK от МТС',
-    linkTo: 'ff',
+    linkTo: Routes.GOODOK,
     addingClassName: 'goodok'
 },
     {
         activeTitle: 'Запущена beta версия',
         name: 'MVP версия игры Мир клиента',
-        linkTo: 'ff',
+        linkTo: Routes.CLIENT_WORLD,
         addingClassName: 'cw'
     },
     {
