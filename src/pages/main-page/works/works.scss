@@ -8,12 +8,22 @@
   padding-top: 35px;
   padding-bottom: 35px;
   background: #1a1d24;
+  background: radial-gradient(40.92% 43.59% at 40.92% 29.77%, rgb(48, 53, 64) 0%, rgb(25, 28, 34) 100%), rgb(25, 28, 34);
+}
+
+.workWrapper {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .work__prev {
   display: flex;
   padding: 45px;
-  margin-right: 2.5%;
+  margin-right: 5%;
   margin-top: 2.5%;
   width: 45%;
   height: 300px;

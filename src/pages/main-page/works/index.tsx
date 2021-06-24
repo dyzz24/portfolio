@@ -80,6 +80,7 @@ const worksConfig = [
 
 export const Works:  React.FC<IWithRefChildren>  = ({refElement}) => {
     return <section className='work_section' ref={refElement}>
+        <div className={'workWrapper'}>
         {
             worksConfig.map(el =>
                 <div className={"work__prev"} key={el.name}>
@@ -93,7 +94,8 @@ export const Works:  React.FC<IWithRefChildren>  = ({refElement}) => {
                     {el.externalReference && <a href={el.externalReference} target={'_blank'} className="work_btn btn_bottom"><span>{el.externalReference}</span></a>}
                 </div>
             )
-        }
 
+        }
+        </div>
     </section>
 }
