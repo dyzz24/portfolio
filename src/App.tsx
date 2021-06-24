@@ -3,10 +3,10 @@ import './App.scss';
 import {Preloader} from "./components/preloader";
 import {ProgressScroll} from "./components/progress-scroll";
 import {HashRouter, Switch, Route} from "react-router-dom";
-import {MainPage} from "./components/main-page";
+import {MainPage} from "./pages/main-page";
 import {Routes} from "./routes";
 import {Footer} from "./components/footer";
-import {WorksPageSelector} from "./components/works-page-selector";
+import {WorksPageSelector} from "./pages/works-page-selector";
 
 
 function App() {

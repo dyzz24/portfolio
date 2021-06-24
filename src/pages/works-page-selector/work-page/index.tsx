@@ -1,6 +1,6 @@
 import React from "react";
 import './work-page.scss';
-import {Slider} from "../../slider";
+import {Slider} from "../../../components/slider";
 import {IWorkPage} from "../index";
 import {BackToMain} from "../back-to-main";
 

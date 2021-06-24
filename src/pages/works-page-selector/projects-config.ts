@@ -4,10 +4,11 @@ import good_okSlide1 from '../../img/goodok_slide1.jpg';
 import good_okSlide2 from '../../img/goodok_slide2.jpg';
 import good_okSlide3 from '../../img/goodok_slide3.jpg';
 import cwSlide1 from '../../img/cw1.png';
-import cwSlide2 from '../../img/cw2.png'
-import cwSlide3 from '../../img/cw3.png'
-import cwSlide4 from '../../img/cw4.png'
-import cwSlide5 from '../../img/cw5.png'
+import cwSlide2 from '../../img/cw2.png';
+import cwSlide3 from '../../img/cw3.png';
+import cwSlide4 from '../../img/cw4.png';
+import cwSlide5 from '../../img/cw5.png';
+import gsm from '../../img/gsm.jpg';
 
 
 
@@ -47,6 +48,21 @@ export const projectsConfig: Partial<Record<Routes, IWorkPage>> = {
             'Создано множество кастомных и переиспользуемых на всём приложение реакт хуков.',
             'Написана логика работы маркеров и всплывающих подсказок в игре.',
             ' Настроена гугл-аналитика для более чем 100 событий в игре'
+        ]
+    },
+    [Routes.GSM] : {
+        projectTitle: 'Global System Monitoring',
+        projectDescription: 'Система по контролю и мониторингу состояния серверов, коммутаторов и прочего оборудования',
+        slides: [gsm],
+        technologiesTitle: 'Проект написан на Angular 6, TypeScript. Backend на C#.',
+        technologiesList: ['Angular 6', 'RxJS', 'SCSS', 'TypeScript', 'SignalR (websocket)', 'BPMN.js', 'Chart.js', 'ES6', 'REST API'],
+        contributionsToProjectList: ['Доработан и улучшен существующий функционал приложения',
+            'Создано множество компонентов, таких как личный кабинет пользователя, компонент изменения диапазонов порогов сенсоров устройств (исп. nouislider), карта сети, раздел автоматизации действий, управление метками доступа, журнал событий и прочее.',
+            'Сконфигурированы и настроены вэб-сокеты, реализована логика общения с backend по ws протоколу.',
+            'Реализована система управления доступом (роли) к разделам приложения на основе мапинга разрешений приходящих с бэка (roleGuard).',
+            'Созданы сложные CSS анимации (keyframes + css transition).',
+            'Настройка, редактирование системы ролей в приложении',
+            'Реализован графический интерфейс вывода устройств на схематическую карту'
         ]
     }
 }

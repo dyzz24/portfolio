@@ -6,7 +6,7 @@ import {Separator} from "./separator";
 import {Works} from "./works";
 import {ExperienceEducationSection} from "./experience-education-section";
 import {Skills} from "./skills";
-import {Menu} from "../menu";
+import {Menu} from "../../components/menu";
 
 export const MainPage = () => {
     const headerRef = useRef<HTMLDivElement>(null);
