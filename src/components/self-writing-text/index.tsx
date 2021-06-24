@@ -18,6 +18,22 @@ export const SelfWritingText: React.FC<{arrayOfStrings: string[]}> = ({arrayOfSt
         useEffect(() => {
                 return () => clearTimeout(timeOutRef.current);
         }, [])
+
+
+        const deleteLatestText = (text: string) => {
+                clearTimeout(timeOutRef.current);
+                const replacedString = text.replace(/.$/,"");
+                if(text.length === 0) {
+                        count++;
+                        stopWriteFlag = false;
+                        writeText(arrayOfStrings);
+                }
+                timeOutRef.current = window.setTimeout(() => {
+                        setText(replacedString);
+                        clearTimeout(timeOutRef.current);
+                        deleteLatestText(replacedString);
+                }, 50)
+        }
         
 
         
@@ -41,11 +57,7 @@ export const SelfWritingText: React.FC<{arrayOfStrings: string[]}> = ({arrayOfSt
 
                 if(currentText.length === 0) {
                         timeOutRef.current = window.setTimeout(() => {
-                                setText('');
-                                count++;
-                                stopWriteFlag = false;
-                                clearTimeout(timeOutRef.current);
-                                writeText(arr);
+                                deleteLatestText(arr[count]);
                         }, 3000)
                         return;
                 }
