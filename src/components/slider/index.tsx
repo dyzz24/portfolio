@@ -1,4 +1,5 @@
 import React, {useEffect, useReducer, useRef, useState} from "react";
+import {FRRImg} from "../FRRImg";
 
 
 const calculateCurrentStep = (step: number, arrLength: number) => {
@@ -52,7 +53,7 @@ export const Slider: React.FC<ISlider> = ({slides}) => {
                 </svg>
             </div>}
             <div className="slider_wrapper" ref={moveSliderRef}>
-                {slides.map((el, idx) => <img key={el} alt={'slide'} loading={'lazy'} src={el} className="slid" decoding={'async'}/>)}
+                {slides.map((el, idx) => <FRRImg key={el} alt={'slide'}  src={el} className="slid" />)}
 
             </div>
             {slides.length > 1 && <div className="slider__control_right" onClick={() => handleClick(1)}>

@@ -14,6 +14,10 @@ export const SelfWritingText: React.FC<{arrayOfStrings: string[]}> = ({arrayOfSt
                         writeText(arrayOfStrings);
                 }
         }, [parentToInsert.current]);
+
+        useEffect(() => {
+                return () => clearTimeout(timeOutRef.current);
+        }, [])
         
 
         

@@ -1,7 +1,14 @@
-import React, {createRef, useEffect, useMemo} from "react";
+import React, {createRef, useContext, useEffect, useMemo} from "react";
 import './skills.scss';
 import {useUnobserve} from "../../../hooks/use-unobserve";
 import {IWithRefChildren} from "../index";
+import {PreloaderStore, PreloaderStoreAction} from "../../../store/preloader-store";
+import {useHandleBackgroundOnLoad} from "../../../hooks/use-handle-background-on-load";
+import tsPng from '../../../img/ts.png';
+import reactPng from '../../../img/react.png';
+import angularPng from '../../../img/angular.png';
+import jsPng from '../../../img/ts.png';
+
 
 const skillsConfig = [{
     name: 'React / Redux / Effector',
@@ -39,6 +46,14 @@ export const Skills: React.FC<IWithRefChildren> = ({refElement}) => {
     );
 
     useUnobserve(refSkillElementsCollection, observer);
+
+    const {dispatch} = useContext(PreloaderStore);
+    useHandleBackgroundOnLoad(tsPng, () => dispatch({type: PreloaderStoreAction.SAFE_SRR_LOADED_RESOURCE}));
+    useHandleBackgroundOnLoad(angularPng, () => dispatch({type: PreloaderStoreAction.SAFE_SRR_LOADED_RESOURCE}));
+    useHandleBackgroundOnLoad(reactPng, () => dispatch({type: PreloaderStoreAction.SAFE_SRR_LOADED_RESOURCE}));
+    useHandleBackgroundOnLoad(jsPng, () => dispatch({type: PreloaderStoreAction.SAFE_SRR_LOADED_RESOURCE}));
+
+
 
 
     useEffect(() => {
@@ -86,11 +101,11 @@ export const Skills: React.FC<IWithRefChildren> = ({refElement}) => {
         </div>
         <div className="right_skills_block">
             <div className="graph_triangle triangle_anim">
-                <div className="side html5"></div>
-                <div className="side ang"></div>
-                <div className="side js">
+                <div className="side html5" data-render={true}></div>
+                <div className="side ang" data-render={true}></div>
+                <div className="side js" data-render={true}>
                 </div>
-                <div className="side css3"></div>
+                <div className="side css3" data-render={true}></div>
             </div>
         </div>
     </section>

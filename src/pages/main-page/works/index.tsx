@@ -3,6 +3,18 @@ import './works.scss';
 import {Link} from 'react-router-dom';
 import {IWithRefChildren} from "../index";
 import {Routes} from "../../../routes";
+import goodokLabel from '../../../img/goodok.jpg';
+import cwmtsLabel from '../../../img/cw_title.png';
+import gsmLabel from '../../../img/gsm.jpg';
+import msc from '../../../img/mastercase.jpg';
+import masterscada from '../../../img/masterscada.jpg';
+import kngdy from '../../../img/kingdy.jpg';
+import mpoc from '../../../img/masteropc.jpg';
+import protoPwa from '../../../img/masterscada_pwa.jpg';
+import musicShop from '../../../img/musicshop.jpg';
+import header from '../../../img/header.jpg';
+import {FRRImg} from "../../../components/FRRImg";
+
 
 
 const worksConfig = [
@@ -10,57 +22,57 @@ const worksConfig = [
     activeTitle: 'Выпущен в прод',
     name: 'Музыкальный сервис GOOD\'OK от МТС',
     linkTo: Routes.GOODOK,
-    addingClassName: 'goodok'
+        labelImg: goodokLabel,
 },
     {
         activeTitle: 'Запущена beta версия',
         name: 'MVP версия игры Мир клиента',
         linkTo: Routes.CLIENT_WORLD,
-        addingClassName: 'cw'
+        labelImg: cwmtsLabel
     },
     {
         name: 'SPA (angular 6) Global System Monitoring',
         linkTo: Routes.GSM,
-        addingClassName: 'gsm'
+        labelImg: gsmLabel
     },
     {
         activeTitle: 'Рабочий прототип',
         name: 'Модуль почты + модуль авторизации CRM Системы MasterCase',
         linkTo: Routes.CRM_SYSTEM,
-        addingClassName: 'msc'
+        labelImg: msc
+
     },
     {
         name: 'Сайт презентация основного продукта компании - MasterScada',
         linkTo: '',
-        addingClassName: 'mscd',
-
+        labelImg: masterscada
     },
     {
         name: 'Партнерский сайт компании Kingdy',
         linkTo: '',
-        addingClassName: 'kngd',
+        labelImg: kngdy,
         externalReference: 'http://kingdy.ru/'
     },
     {
         name: 'Сайт презентация продукта MasterOPC',
         linkTo: '',
-        addingClassName: 'msopc',
+        labelImg: mpoc,
         externalReference: 'http://www.masteropc.ru/'
     },
     {
         name: 'Верстка прототипа приложения Masterscada 4',
         linkTo: '',
-        addingClassName: 'proto'
+        labelImg: protoPwa
     },
     {
         name: 'Сайт проекта musicshop',
         linkTo: '',
-        addingClassName: 'musicshop'
+        labelImg: musicShop,
     },
     {
         name: 'Сайт по монтажу инженерных систем и коммуникаций',
         linkTo: '',
-        addingClassName: 'active',
+        labelImg: header,
         externalReference: 'http://engineer37.ru/'
 
     },
@@ -70,7 +82,8 @@ export const Works:  React.FC<IWithRefChildren>  = ({refElement}) => {
     return <section className='work_section' ref={refElement}>
         {
             worksConfig.map(el =>
-                <div className={"work__prev " + el.addingClassName} key={el.addingClassName}>
+                <div className={"work__prev"} key={el.name}>
+                    <FRRImg src={el.labelImg}/>
                     {el.activeTitle && <div className="work_title active">{el.activeTitle}</div>}
                     <div className="work_tech_block">
                         <p>{el.name}</p>

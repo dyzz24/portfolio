@@ -1,7 +1,10 @@
-import React, {createRef, useEffect, useMemo, useRef} from "react";
+import React, {createRef, useContext, useEffect, useMemo} from "react";
 import styles from './header.module.scss';
 import {generateId} from "../../../utils/generate-id";
 import {IWithRefChildren} from "../index";
+import {PreloaderStore, PreloaderStoreAction} from "../../../store/preloader-store";
+import {useHandleBackgroundOnLoad} from "../../../hooks/use-handle-background-on-load";
+import headerBg from '../../../img/header.jpg';
 
 const firstRow = [
     {text: 'H'},
@@ -94,12 +97,15 @@ export const Header: React.FC<IWithRefChildren> = ({refElement}) => {
         return () => window.removeEventListener("scroll", spanAnim);
     }, [])
 
+    const {dispatch} = useContext(PreloaderStore);
+    useHandleBackgroundOnLoad(headerBg, () => dispatch({type: PreloaderStoreAction.SAFE_SRR_LOADED_RESOURCE}))
 
 
 
 
 
-    return <header id='start' ref={refElement}>
+
+    return <header id='start' ref={refElement} data-render={true}>
         <div className={styles.span_classes}>
             {firstRow.map((el, idx) => <span ref={firstRefsCollection[idx]} className={el.className || ''} key={generateId(10)}>{el.text}</span>)}
         </div>

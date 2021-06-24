@@ -1,11 +1,14 @@
 import './style.module.scss';
 import styles from './style.module.scss';
-import React, { useState} from "react";
+import React, {useContext} from "react";
+import {PreloaderStore} from "../../store/preloader-store";
 
 export const Preloader = () => {
-    const [isLoaded, setIsLoaded] = useState(true);
+    const {state} = useContext(PreloaderStore);
 
-    if(isLoaded) return null;
+
+
+    if(state.FRRLoadedImgQuantityLeft <= 0) return null;
 
     return <div className={styles.loader}>
         <p className={styles.preloader_title}>Загрузка</p>

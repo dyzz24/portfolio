@@ -27,6 +27,19 @@
   position: relative;
   border-radius: 5px;
 
+  img {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  div {
+    z-index: 2;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -38,61 +51,15 @@
     opacity: 0.8;
     display: none;
     transition: 0.4s;
+    z-index: 2;
   }
 
   &:hover::before {
     display: block;
   }
 
-  &.active {
-    background: url("../../../img/header.jpg") no-repeat center;
-    background-size: 100%;
-  }
 
-  &.cw {
-    background: url("../../../img/cw_title.png") no-repeat center;
-    background-size: 100%;
-  }
 
-  &.gsm {
-    background: url("../../../img/gsm.jpg") no-repeat center;
-    background-size: 100%;
-  }
-
-  &.msc {
-    background: url("../../../img/mastercase.jpg") no-repeat center;
-    background-size: 100%;
-  }
-
-  &.mscd {
-    background: url("../../../img/masterscada.jpg") no-repeat center;
-    background-size: 100%;
-  }
-
-  &.kngd {
-    background: url("../../../img/kingdy.jpg") no-repeat center;
-    background-size: 100%;
-  }
-
-  &.msopc {
-    background: url("../../../img/masteropc.jpg") no-repeat center;
-    background-size: 100%;
-  }
-
-  &.proto {
-    background: url("../../../img/masterscada_pwa.jpg") no-repeat center;
-    background-size: 100%;
-  }
-
-  &.musicshop {
-    background: url("../../../img/musicshop.jpg") no-repeat center;
-    background-size: 100%;
-  }
-
-  &.goodok {
-    background: url("../../../img/goodok.jpg") no-repeat center;
-    background-size: 100%;
-  }
 
 
   &:nth-child(even) {
