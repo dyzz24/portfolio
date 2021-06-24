@@ -26,38 +26,43 @@ const worksConfig = [
     {
         activeTitle: 'Рабочий прототип',
         name: 'Модуль почты + модуль авторизации CRM Системы MasterCase',
-        linkTo: 'ff',
+        linkTo: Routes.CRM_SYSTEM,
         addingClassName: 'msc'
     },
     {
         name: 'Сайт презентация основного продукта компании - MasterScada',
-        linkTo: 'ff',
-        addingClassName: 'mscd'
+        linkTo: '',
+        addingClassName: 'mscd',
+
     },
     {
         name: 'Партнерский сайт компании Kingdy',
-        linkTo: 'ff',
-        addingClassName: 'kngd'
+        linkTo: '',
+        addingClassName: 'kngd',
+        externalReference: 'http://kingdy.ru/'
     },
     {
         name: 'Сайт презентация продукта MasterOPC',
-        linkTo: 'ff',
-        addingClassName: 'msopc'
+        linkTo: '',
+        addingClassName: 'msopc',
+        externalReference: 'http://www.masteropc.ru/'
     },
     {
         name: 'Верстка прототипа приложения Masterscada 4',
-        linkTo: 'ff',
+        linkTo: '',
         addingClassName: 'proto'
     },
     {
         name: 'Сайт проекта musicshop',
-        linkTo: 'ff',
+        linkTo: '',
         addingClassName: 'musicshop'
     },
     {
         name: 'Сайт по монтажу инженерных систем и коммуникаций',
-        linkTo: 'ff',
-        addingClassName: 'active'
+        linkTo: '',
+        addingClassName: 'active',
+        externalReference: 'http://engineer37.ru/'
+
     },
 ]
 
@@ -72,6 +77,7 @@ export const Works:  React.FC<IWithRefChildren>  = ({refElement}) => {
                     </div>
                     {el.linkTo && <Link to={el.linkTo} className="work_btn btn_bottom"><span>Подробнее</span></Link>}
                     {el.linkTo && <Link to={el.linkTo} className='prev_link'></Link>}
+                    {el.externalReference && <a href={el.externalReference} target={'_blank'} className="work_btn btn_bottom"><span>{el.externalReference}</span></a>}
                 </div>
             )
         }

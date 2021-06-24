@@ -9,6 +9,9 @@ import cwSlide3 from '../../img/cw3.png';
 import cwSlide4 from '../../img/cw4.png';
 import cwSlide5 from '../../img/cw5.png';
 import gsm from '../../img/gsm.jpg';
+import crmSlide1 from '../../img/crmSlide1.jpg';
+import crmSlide2 from '../../img/crmSlide2.jpg';
+
 
 
 
@@ -63,6 +66,16 @@ export const projectsConfig: Partial<Record<Routes, IWorkPage>> = {
             'Созданы сложные CSS анимации (keyframes + css transition).',
             'Настройка, редактирование системы ролей в приложении',
             'Реализован графический интерфейс вывода устройств на схематическую карту'
+        ]
+    },
+    [Routes.CRM_SYSTEM] : {
+        projectTitle: 'CRM система MasterCase (модуль почты)',
+        projectDescription: 'Корпоративная CRM система, призванная решить и автоматизировать часть рутинных задач для малого и среднего бизнеса',
+        slides: [crmSlide1, crmSlide2],
+        technologiesTitle: 'Проект написан на Angular 7, TypeScript. Backend на node.js',
+        technologiesList: ['Angular 7 (CLI)', 'RxJS', 'SCSS', 'TypeScript', 'Socket IO', 'Drag n drop, svg-animation, icon-fonts'],
+        contributionsToProjectList: ['Реализована функциональность входа в систему. Почтовый модуль находится в стадии beta, активно тестируется и дополняется. \n',
+        'В настоящий момент базовые функции почтового клиента работают исправно.'
         ]
     }
 }

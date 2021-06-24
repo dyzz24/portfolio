@@ -229,7 +229,7 @@ section {
 
     &::before {
       display: block;
-      opacity: 0.7;
+      opacity: 0.8;
     }
 
     &:hover {
@@ -454,6 +454,11 @@ section {
   .work__prev .work_tech_block,
   .experience__more h3 {
     font-size: 16px;
+  }
+
+  .work_tech_block {
+    font-weight: 900;
+    line-height: 22px;
   }
 
   .work_btn {

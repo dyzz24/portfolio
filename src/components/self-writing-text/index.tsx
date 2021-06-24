@@ -8,7 +8,7 @@ let stopWriteFlag = false; // флаг для текущего текста
 export const SelfWritingText: React.FC<{arrayOfStrings: string[]}> = ({arrayOfStrings}) => {
         const parentToInsert = useRef<HTMLParagraphElement | null>(null);
         const timeOutRef = useRef(0);
-        const [text, setText] = useState<string[]>([]);
+        const [text, setText] = useState<string>('');
         useEffect(() => {
                 if(parentToInsert.current) {
                         writeText(arrayOfStrings);
@@ -37,7 +37,7 @@ export const SelfWritingText: React.FC<{arrayOfStrings: string[]}> = ({arrayOfSt
 
                 if(currentText.length === 0) {
                         timeOutRef.current = window.setTimeout(() => {
-                                setText([]);
+                                setText('');
                                 count++;
                                 stopWriteFlag = false;
                                 clearTimeout(timeOutRef.current);
@@ -47,7 +47,10 @@ export const SelfWritingText: React.FC<{arrayOfStrings: string[]}> = ({arrayOfSt
                 }
 
                 timeOutRef.current = window.setTimeout(() => {
-                        setText(prevState => [...prevState, currentText[0]]);
+                        setText(prevState => {
+                                prevState += currentText[0];
+                                return prevState
+                        });
                         currentText = currentText.slice(1);
                         clearTimeout(timeOutRef.current);
                         writeText(arr)
@@ -57,5 +60,5 @@ export const SelfWritingText: React.FC<{arrayOfStrings: string[]}> = ({arrayOfSt
         }
         
         
-        return <p className={style.added_span} ref={parentToInsert}>{text.map((el, idx) => <span key={idx} className={el === ' ' ? style.empty : ''}>{el}</span>)}<span className={style.line + ' ' + 'anim_span'}>|</span></p>
+        return <p className={style.added_span} ref={parentToInsert}><span>{text}</span><span className={style.line + ' ' + 'anim_span'}>|</span></p>
 }
