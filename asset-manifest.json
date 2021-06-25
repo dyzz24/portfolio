@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.499e16e0.chunk.css",
-    "main.js": "/portfolio/static/js/main.9bb0653c.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.9bb0653c.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.b08bf603.chunk.css",
+    "main.js": "/portfolio/static/js/main.03a78357.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.03a78357.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.1ed5ba00.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.1ed5ba00.js.map",
     "static/js/2.6bd01899.chunk.js": "/portfolio/static/js/2.6bd01899.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.f769ef87.chunk.js": "/portfolio/static/js/3.f769ef87.chunk.js",
     "static/js/3.f769ef87.chunk.js.map": "/portfolio/static/js/3.f769ef87.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.499e16e0.chunk.css.map": "/portfolio/static/css/main.499e16e0.chunk.css.map",
+    "static/css/main.b08bf603.chunk.css.map": "/portfolio/static/css/main.b08bf603.chunk.css.map",
     "static/js/2.6bd01899.chunk.js.LICENSE.txt": "/portfolio/static/js/2.6bd01899.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/portfolio/static/media/separator.81117de6.png",
     "static/media/crmSlide1.bbad47e5.jpg": "/portfolio/static/media/crmSlide1.bbad47e5.jpg",
@@ -27,8 +27,8 @@
     "static/media/goodok_slide2.e17ef3d4.jpg": "/portfolio/static/media/goodok_slide2.e17ef3d4.jpg",
     "static/media/goodok_slide3.0d2ca9b9.jpg": "/portfolio/static/media/goodok_slide3.0d2ca9b9.jpg",
     "static/media/gsm.63b127d3.jpg": "/portfolio/static/media/gsm.63b127d3.jpg",
-    "static/media/header.module.scss": "/portfolio/static/media/header.816c4191.jpg",
     "static/media/skills.scss": "/portfolio/static/media/react.a2211b93.png",
+    "static/media/investing.c055cf9e.png": "/portfolio/static/media/investing.c055cf9e.png",
     "static/media/kingdy.21d62897.jpg": "/portfolio/static/media/kingdy.21d62897.jpg",
     "static/media/mastercase.6b4e06d6.jpg": "/portfolio/static/media/mastercase.6b4e06d6.jpg",
     "static/media/masteropc.30325b3a.jpg": "/portfolio/static/media/masteropc.30325b3a.jpg",
@@ -40,7 +40,7 @@
   "entrypoints": [
     "static/js/runtime-main.1ed5ba00.js",
     "static/js/2.6bd01899.chunk.js",
-    "static/css/main.499e16e0.chunk.css",
-    "static/js/main.9bb0653c.chunk.js"
+    "static/css/main.b08bf603.chunk.css",
+    "static/js/main.03a78357.chunk.js"
   ]
 }
