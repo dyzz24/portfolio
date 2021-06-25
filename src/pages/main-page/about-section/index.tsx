@@ -6,9 +6,9 @@ import {IWithRefChildren} from "../index";
 export const AboutSection: React.FC<IWithRefChildren> = ({refElement}) => {
 
     const arrayOfStrings = [
-        "Разрабатываю сложные WEB-приложения",
-        "Использовал как React так и Angular 5+",
-        "...TS, ES6, RxJs, websockets, REST API, redux, effector, webpack, gulp",
+        "Разрабатываю сложные WEB-приложения на React, TS, Styled components",
+        "Использовал как React так и Angular 5+. Немножко писал на NEXT.js",
+        "...TS, NEXT.js, react hooks, ES6+, RxJs, websockets, REST API, redux, effector, webpack, gulp",
     ];
 
     return <section className='about' ref={refElement}>

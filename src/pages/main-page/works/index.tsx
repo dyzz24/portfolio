@@ -14,10 +14,16 @@ import protoPwa from '../../../img/masterscada_pwa.jpg';
 import musicShop from '../../../img/musicshop.jpg';
 import header from '../../../img/header.jpg';
 import {FRRImg} from "../../../components/FRRImg";
+import investing from '../../../img/investing.png';
 
 
 
 const worksConfig = [
+    {activeTitle: 'NEXT.JS, prototype (in progress)',
+        name: 'Инструмент оценки инвестиционной привлекательности акций компании',
+        externalReference: 'https://investing-next-js.vercel.app/company-profile/AAPL',
+        labelImg: investing,
+    },
     {
     activeTitle: 'Выпущен в прод',
     name: 'Музыкальный сервис GOOD\'OK от МТС',

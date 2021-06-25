@@ -19,3 +19,9 @@
   font-size: 18px;
   margin-right: 6px;
 }
+
+@media screen and (max-width: 600px) {
+  .added_span {
+    min-height: 40px;
+  }
+}
