@@ -2,10 +2,28 @@ import React, {useEffect, useRef, useState} from "react";
 import style from './self-writing-text.module.scss';
 
 
-let count = 0; // начальный счетчик
-let currentText = ""; // текущая строка из массива
-let stopWriteFlag = false; // флаг для текущего текста
-export const SelfWritingText: React.FC<{arrayOfStrings: string[]}> = ({arrayOfStrings}) => {
+
+
+ class TextIterationHandler {
+        count = 0;
+        currentText = '';
+        stopWriteFlag = false;
+
+        set setCount(arg: number) {
+                this.count = arg;
+        }
+        set setCurrentText(arg: string) {
+                this.currentText = arg;
+        }
+        set setStopWriteFlag(arg: boolean) {
+                this.stopWriteFlag = arg;
+        }
+
+}
+
+export const SelfWritingText: React.FC<{arrayOfStrings: string[]}> =
+    ({arrayOfStrings}) => {
+        const [textIterationInstance] = useState(new TextIterationHandler());
         const parentToInsert = useRef<HTMLParagraphElement | null>(null);
         const timeOutRef = useRef(0);
         const [text, setText] = useState<string>('');
@@ -24,9 +42,10 @@ export const SelfWritingText: React.FC<{arrayOfStrings: string[]}> = ({arrayOfSt
                 clearTimeout(timeOutRef.current);
                 const replacedString = text.replace(/.$/,"");
                 if(text.length === 0) {
-                        count++;
-                        stopWriteFlag = false;
+                        textIterationInstance.setCount = textIterationInstance.count + 1;
+                        textIterationInstance.setStopWriteFlag = false;
                         writeText(arrayOfStrings);
+                        return
                 }
                 timeOutRef.current = window.setTimeout(() => {
                         setText(replacedString);
@@ -41,33 +60,31 @@ export const SelfWritingText: React.FC<{arrayOfStrings: string[]}> = ({arrayOfSt
                 const parent = parentToInsert.current;
 
                 if(!parent) return;
-                if (!stopWriteFlag) {
-                        currentText = arr[count]; // ставлю текущую стрингу из массива
-                        stopWriteFlag = true; // блокирую последующую вставку
+                if (!textIterationInstance.stopWriteFlag) {
+                        textIterationInstance.setCurrentText = arr[textIterationInstance.count]; // ставлю текущую стрингу из массива
+                        textIterationInstance.setStopWriteFlag = true;
                 }
-                if(count ===  arr.length) {
+                if(textIterationInstance.count ===  arr.length) {
                         clearTimeout(timeOutRef.current);
-                        count = 0;
-                        stopWriteFlag = false;
+                        textIterationInstance.setCount = 0;
+                        textIterationInstance.setStopWriteFlag = false;
                         writeText(arr);
                         return;
-
-
                 }
 
-                if(currentText.length === 0) {
+                if(textIterationInstance.currentText.length === 0) {
                         timeOutRef.current = window.setTimeout(() => {
-                                deleteLatestText(arr[count]);
+                                deleteLatestText(arr[textIterationInstance.count]);
                         }, 3000)
                         return;
                 }
 
                 timeOutRef.current = window.setTimeout(() => {
                         setText(prevState => {
-                                prevState += currentText[0];
+                                prevState += textIterationInstance.currentText[0];
                                 return prevState
                         });
-                        currentText = currentText.slice(1);
+                        textIterationInstance.setCurrentText = textIterationInstance.currentText.slice(1)
                         clearTimeout(timeOutRef.current);
                         writeText(arr)
                 }, 100)
