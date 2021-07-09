@@ -98,12 +98,7 @@ export const Header: React.FC<IWithRefChildren> = ({refElement}) => {
     }, [])
 
     const {dispatch} = useContext(PreloaderStore);
-    useHandleBackgroundOnLoad(headerBg, () => dispatch({type: PreloaderStoreAction.SAFE_SRR_LOADED_RESOURCE}))
-
-
-
-
-
+    useHandleBackgroundOnLoad([headerBg], () => dispatch({type: PreloaderStoreAction.SAFE_SRR_LOADED_RESOURCE}))
 
     return <header id='start' ref={refElement} data-render={true}>
         <div className={styles.span_classes}>

@@ -48,13 +48,7 @@ export const Skills: React.FC<IWithRefChildren> = ({refElement}) => {
     useUnobserve(refSkillElementsCollection, observer);
 
     const {dispatch} = useContext(PreloaderStore);
-    useHandleBackgroundOnLoad(tsPng, () => dispatch({type: PreloaderStoreAction.SAFE_SRR_LOADED_RESOURCE}));
-    useHandleBackgroundOnLoad(angularPng, () => dispatch({type: PreloaderStoreAction.SAFE_SRR_LOADED_RESOURCE}));
-    useHandleBackgroundOnLoad(reactPng, () => dispatch({type: PreloaderStoreAction.SAFE_SRR_LOADED_RESOURCE}));
-    useHandleBackgroundOnLoad(jsPng, () => dispatch({type: PreloaderStoreAction.SAFE_SRR_LOADED_RESOURCE}));
-
-
-
+    useHandleBackgroundOnLoad([tsPng, angularPng, reactPng, jsPng], () => dispatch({type: PreloaderStoreAction.SAFE_SRR_LOADED_RESOURCE}));
 
     useEffect(() => {
         if(refSkillElementsCollection.length) {

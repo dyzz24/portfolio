@@ -13,25 +13,28 @@ import {usePreloader} from "../../hooks/use-preloading";
 export const MainPage = () => {
 
 
-    const headerRef = useRef<HTMLDivElement>(null);
-    const aboutRef = useRef<HTMLDivElement>(null);
-    const worksRef = useRef<HTMLDivElement>(null);
-    const experienceRef = useRef<HTMLDivElement>(null);
-    const skillsRef = useRef<HTMLDivElement>(null);
 
     const {dispatch} = useContext(PreloaderStore);
     usePreloader(dispatch);
 
+    const menuProps = {
+        aboutRef: useRef<HTMLDivElement>(null),
+        experienceRef: useRef<HTMLDivElement>(null),
+        headerRef: useRef<HTMLDivElement>(null),
+        skillsRef: useRef<HTMLDivElement>(null),
+        worksRef: useRef<HTMLDivElement>(null)
+    }
+
     return <div className={styles.content}>
-        <Menu aboutRef={aboutRef} experienceRef={experienceRef} headerRef={headerRef} skillsRef={skillsRef} worksRef={worksRef}/>
-        <Header refElement={headerRef}/>
-        <AboutSection refElement={aboutRef}/>
+        <Menu {...menuProps}/>
+        <Header refElement={menuProps.headerRef}/>
+        <AboutSection refElement={menuProps.aboutRef}/>
         <Separator text={'Последние работы'}/>
-        <Works refElement={worksRef}/>
+        <Works refElement={menuProps.worksRef}/>
         <Separator text={'Опыт работы / образование'}/>
-        <ExperienceEducationSection refElement={experienceRef}/>
+        <ExperienceEducationSection refElement={menuProps.experienceRef}/>
         <Separator text={'Навыки'}/>
-        <Skills refElement={skillsRef}/>
+        <Skills refElement={menuProps.skillsRef}/>
     </div>
 }
 
