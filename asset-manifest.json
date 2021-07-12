@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.b08bf603.chunk.css",
+    "main.css": "/portfolio/static/css/main.81b93489.chunk.css",
     "main.js": "/portfolio/static/js/main.2a095941.chunk.js",
     "main.js.map": "/portfolio/static/js/main.2a095941.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.fb5e174a.js",
@@ -10,7 +10,7 @@
     "static/js/3.7ce8ac80.chunk.js": "/portfolio/static/js/3.7ce8ac80.chunk.js",
     "static/js/3.7ce8ac80.chunk.js.map": "/portfolio/static/js/3.7ce8ac80.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.b08bf603.chunk.css.map": "/portfolio/static/css/main.b08bf603.chunk.css.map",
+    "static/css/main.81b93489.chunk.css.map": "/portfolio/static/css/main.81b93489.chunk.css.map",
     "static/js/2.2813ba77.chunk.js.LICENSE.txt": "/portfolio/static/js/2.2813ba77.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/portfolio/static/media/separator.81117de6.png",
     "static/media/crmSlide1.bbad47e5.jpg": "/portfolio/static/media/crmSlide1.bbad47e5.jpg",
@@ -40,7 +40,7 @@
   "entrypoints": [
     "static/js/runtime-main.fb5e174a.js",
     "static/js/2.2813ba77.chunk.js",
-    "static/css/main.b08bf603.chunk.css",
+    "static/css/main.81b93489.chunk.css",
     "static/js/main.2a095941.chunk.js"
   ]
 }
