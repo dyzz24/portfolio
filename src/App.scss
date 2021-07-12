@@ -1,5 +1,11 @@
 @import './styles/_default.scss';
 
+:root {
+  --main-text-white-color: #f4f6ef;
+  --main-yellow-text-color: #efbb35;
+  --gradient-background: linear-gradient(to right, #252934, #112437);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -9,7 +15,7 @@ body {
 a {
   outline: none;
   text-decoration: none;
-  color: white;
+  color: var(--main-text-white-color);
 }
 
 p,
@@ -35,7 +41,7 @@ main {
   width: 100%;
   box-sizing: border-box;
   background: #252934;
-  background: linear-gradient(to right, #252934, #112437);
+  background: var(--gradient-background);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -45,7 +51,7 @@ h2 {
   font-size: 30px;
   letter-spacing: 4px;
   font-family: "Raleway-Bold";
-  color: #efbb35;
+  color: var(--main-yellow-text-color);
 }
 
 .anim_span {
@@ -140,11 +146,11 @@ $main_color: rgb(236, 228, 228);
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 8px;
   border-radius: 8px;
-  background-color: #efbb35;
+  background-color: var(--main-yellow-text-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #efbb35;
+  background-color: var(--main-yellow-text-color);
 }
 
 ::-webkit-scrollbar {

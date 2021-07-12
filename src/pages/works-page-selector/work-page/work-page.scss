@@ -47,7 +47,7 @@ $main-text-color: rgb(240, 238, 238);
 
   &.active {
     transform: scale(2);
-    background: #efbb35;
+    background: var(--main-yellow-text-color);
   }
 
   &:hover {
@@ -150,7 +150,7 @@ h3 {
   margin-top: 30px;
   margin-bottom: 15px;
   font-family: "FuturaPT-Heavy";
-  color: #efbb35;
+  color: var(--main-yellow-text-color);
   font-size: 26px;
   display: inline-block;
 }
@@ -158,7 +158,7 @@ h3 {
 hr {
   height: 1px;
   width: 280px;
-  background-color: #efbb35;
+  background-color: var(--main-yellow-text-color);
   border: 0;
   margin: 0;
   margin-bottom: 16px;
@@ -194,7 +194,7 @@ video {
   margin-top: 16px;
 
   background: #252934;
-  background: linear-gradient(to right, #252934, #112437);
+  background: var(--gradient-background);
 }
 
 .back_menu {
@@ -214,7 +214,7 @@ video {
     padding: 4px;
     box-sizing: border-box;
     margin: 3px 2px;
-    background: #efbb35;
+    background: var(--main-yellow-text-color);
     transition: 0.1s;
     //   box-shadow: 1px 1px 1px 1px #efbb35;
   }

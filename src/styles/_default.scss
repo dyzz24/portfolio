@@ -4,7 +4,7 @@
   letter-spacing: $ls;
   font-family: "Raleway-Medium";
   font-weight: 700;
-  color: #efbb35;
+  color: var(--main-yellow-text-color);
 }
 
 @mixin paddings($tops, $lefts) {
@@ -18,7 +18,7 @@
   letter-spacing: $ls;
   font-family: "Raleway-Medium";
   font-weight: 700;
-  color: #efbb35;
+  color: var(--main-yellow-text-color);
 }
 
 

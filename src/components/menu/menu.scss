@@ -15,7 +15,7 @@
   span {
     width: 30px;
     height: 2px;
-    background: #efbb35;
+    background: var(--main-yellow-text-color);
     margin-bottom: 8px;
     transition: inherit;
   }
@@ -80,7 +80,7 @@
     position: relative;
 
     &:hover svg {
-      fill: #efbb35;
+      fill: var(--main-yellow-text-color);
     }
 
     &:hover::before {

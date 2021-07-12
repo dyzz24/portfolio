@@ -7,7 +7,7 @@
 
   p {
     font-family: "Raleway-Regular";
-    color: #f9ffee;
+    color: var(--main-text-white-color);
   }
 
   &__row {
@@ -33,7 +33,7 @@
     span {
       font-family: "Raleway-SemiBoldItalic";
       font-size: 18px;
-      color: #f9ffee;
+      color: var(--main-text-white-color);
     }
   }
 
@@ -50,14 +50,14 @@
     height: 20px;
     border-radius: 50%;
     transform: scale(0);
-    background: #efbb35;
+    background: var(--main-yellow-text-color);
     transition: 0.7s;
   }
 
   &__line {
     width: 2px;
     height: 0%;
-    background: #efbb35;
+    background: var(--main-yellow-text-color);
     transition: 0.7s;
     // animation: exp_line_anim .4s linear infinite;
   }
@@ -68,12 +68,12 @@
     flex: 1;
 
     h3 {
-      color: #efbb35;
+      color: var(--main-yellow-text-color);
       font-size: 24px;
       font-family: "Raleway-Regular";
       margin-bottom: 16px;
       display: inline-block;
-      border-bottom: 1px solid #efbb35;
+      border-bottom: 1px solid var(--main-yellow-text-color);
     }
 
     p {

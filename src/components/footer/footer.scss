@@ -6,7 +6,7 @@ footer {
   height: 250px;
 
   background: #252934;
-  background: linear-gradient(to right, #252934, #112437);
+  background: var(--gradient-background);
 
   display: flex;
   // align-items: center;
@@ -25,7 +25,7 @@ footer {
   left: 50%;
   margin-right: -50%;
   transform: translateX(-50%);
-  background-color: #efbb35 !important;
+  background-color: var(--main-yellow-text-color) !important;
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -39,7 +39,7 @@ footer {
   box-sizing: border-box;
   cursor: pointer;
   display: flex;
-  color: white;
+  color: var(--main-text-white-color);
   font-family: "Raleway-Regular";
   font-weight: 600;
   letter-spacing: 1px;
@@ -98,7 +98,7 @@ footer {
 
   p {
     font-family: "Raleway-Regular";
-    color: white;
+    color: var(--main-text-white-color);
     font-size: 18px;
     margin-top: 6px;
   }
