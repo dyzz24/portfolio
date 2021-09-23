@@ -24,15 +24,15 @@ export const projectsConfig: Partial<Record<Routes, IWorkPage>> = {
         projectTitle: 'МТС GOOD\'OK',
         projectDescription: 'Новый сервис установки мелодии вместо гудка от МТС',
         slides: [good_okSlide1, good_okSlide2, good_okSlide3],
-        technologiesTitle: 'Проект написан на React, TypeScript. Частично использован SSR.',
-        technologiesList: ['React', 'React Hooks', 'Styled Components', 'TypeScript', 'ES6+, axios, rest api', 'Git', 'React state manager (useRedux, useContext)'],
+        technologiesTitle: 'Проект написан на Next,js, React, TypeScript',
+        technologiesList: ['Next.js','React', 'React Hooks', 'Styled Components', 'TypeScript', 'ES6+, axios, rest api', 'Git', 'React state manager (useRedux, useContext)'],
         contributionsToProjectList: ['За 3 месяца с нуля написан прототип нового сервиса, заложена архитектура проекта.',
              'Проект доведен до выпуска в прод',
             'Реализована сложная система маршрутизации внутри приложения.',
-            'Добавлен механизм SSR. (React snap)',
             'Реализована lazy load компонентов приложения, оптимизирован трафик, уменьшен размер бандла.',
             'Настроена гугл-аналитика для более чем 40 событий',
-            'Специально для сайта создан рекламный виджет, размещенный на главном сайте МТС'
+            'Специально для сайта создан рекламный виджет, размещенный на главном сайте МТС',
+            'Существующий фронт перенесен на Next.js для улучшения SEO доступности сайта. Посещаемость выросла с 2800 человек в день до 4500 и продолжает расти'
         ],
         projectLink: 'https://goodok.mts.ru/'
     },

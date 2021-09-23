@@ -25,7 +25,7 @@ const worksConfig = [
         labelImg: investing,
     },
     {
-    activeTitle: 'Выпущен в прод',
+    activeTitle: 'NEXT.js - выпущен в прод',
     name: 'Музыкальный сервис GOOD\'OK от МТС',
     linkTo: Routes.GOODOK,
         labelImg: goodokLabel,
