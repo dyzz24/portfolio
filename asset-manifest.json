@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.81b93489.chunk.css",
-    "main.js": "/portfolio/static/js/main.c0176439.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.c0176439.chunk.js.map",
-    "runtime-main.js": "/portfolio/static/js/runtime-main.fb5e174a.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.fb5e174a.js.map",
-    "static/js/2.2813ba77.chunk.js": "/portfolio/static/js/2.2813ba77.chunk.js",
-    "static/js/2.2813ba77.chunk.js.map": "/portfolio/static/js/2.2813ba77.chunk.js.map",
-    "static/js/3.7ce8ac80.chunk.js": "/portfolio/static/js/3.7ce8ac80.chunk.js",
-    "static/js/3.7ce8ac80.chunk.js.map": "/portfolio/static/js/3.7ce8ac80.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.7bc26616.chunk.css",
+    "main.js": "/portfolio/static/js/main.c18038bf.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.c18038bf.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.b5950914.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.b5950914.js.map",
+    "static/js/2.032aecc4.chunk.js": "/portfolio/static/js/2.032aecc4.chunk.js",
+    "static/js/2.032aecc4.chunk.js.map": "/portfolio/static/js/2.032aecc4.chunk.js.map",
+    "static/js/3.05f0028a.chunk.js": "/portfolio/static/js/3.05f0028a.chunk.js",
+    "static/js/3.05f0028a.chunk.js.map": "/portfolio/static/js/3.05f0028a.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.81b93489.chunk.css.map": "/portfolio/static/css/main.81b93489.chunk.css.map",
-    "static/js/2.2813ba77.chunk.js.LICENSE.txt": "/portfolio/static/js/2.2813ba77.chunk.js.LICENSE.txt",
+    "static/css/main.7bc26616.chunk.css.map": "/portfolio/static/css/main.7bc26616.chunk.css.map",
+    "static/js/2.032aecc4.chunk.js.LICENSE.txt": "/portfolio/static/js/2.032aecc4.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/portfolio/static/media/separator.81117de6.png",
     "static/media/crmSlide1.bbad47e5.jpg": "/portfolio/static/media/crmSlide1.bbad47e5.jpg",
     "static/media/crmSlide2.7f2a9d23.jpg": "/portfolio/static/media/crmSlide2.7f2a9d23.jpg",
@@ -38,9 +38,9 @@
     "static/media/up-arrow.944d7cd6.svg": "/portfolio/static/media/up-arrow.944d7cd6.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.fb5e174a.js",
-    "static/js/2.2813ba77.chunk.js",
-    "static/css/main.81b93489.chunk.css",
-    "static/js/main.c0176439.chunk.js"
+    "static/js/runtime-main.b5950914.js",
+    "static/js/2.032aecc4.chunk.js",
+    "static/css/main.7bc26616.chunk.css",
+    "static/js/main.c18038bf.chunk.js"
   ]
 }
