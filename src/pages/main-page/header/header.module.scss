@@ -1,0 +1,52 @@
+@use '../../../styles/adaptive' as *;
+
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: url('../../../img/header.jpg') no-repeat fixed center;
+  background-size: 100% 100%;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #efbb35;
+    background: linear-gradient(to right, #0b1116, #112437);
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  .span_classes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 36px;
+  }
+
+  span {
+    color: var(--main-text-white-color);
+    font-size: 54px;
+    z-index: 2;
+    transition: 0.4s;
+    cursor: default;
+    padding: 0 8px;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: "Raleway-Bold";
+  }
+
+  .colored {
+    color: var(--main-yellow-text-color);
+    font-size: 60px;
+  }
+}

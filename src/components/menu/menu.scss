@@ -1,0 +1,184 @@
+.menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 11;
+  cursor: pointer;
+  transition: 0.2s;
+
+  span {
+    width: 30px;
+    height: 2px;
+    background: var(--main-yellow-text-color);
+    margin-bottom: 8px;
+    transition: inherit;
+  }
+
+  &:hover {
+    background: #112437;
+  }
+
+  &:hover span:nth-child(1) {
+    transform: translateX(-6px);
+    background: white;
+  }
+  &:hover span:nth-child(3) {
+    transform: translateX(-6px);
+    background: white;
+  }
+
+  &:hover span:nth-child(2) {
+    transform: translateX(6px);
+    background: white;
+  }
+
+  &.active {
+    background: #112437;
+
+    span:nth-child(1) {
+      transform: rotate(45deg);
+    }
+    span:nth-child(3) {
+      transform: translateX(-6px);
+      background: white;
+      display: none;
+    }
+
+    span:nth-child(2) {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+}
+
+.hidden_menu {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  width: 100px;
+  background: #112437;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 11;
+
+  &.active {
+    display: flex;
+  }
+
+  span {
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    position: relative;
+
+    &:hover svg {
+      fill: var(--main-yellow-text-color);
+    }
+
+    &:hover::before {
+      display: block;
+    }
+
+    &::before {
+      content: "";
+      font-family: "Raleway-Regular";
+      font-size: 16px;
+      right: 100%;
+      color: rgb(250, 250, 250);
+      position: absolute;
+      padding: 0 10px;
+      box-sizing: border-box;
+      height: 100%;
+      background: #112437;
+      white-space: nowrap;
+      opacity: 0;
+      animation: svg_menu_anim 0.2s linear forwards;
+      display: none;
+    }
+
+    &:nth-child(1)::before {
+      content: "Главная";
+    }
+    &:nth-child(2)::before {
+      content: "Обо мне";
+    }
+    &:nth-child(3)::before {
+      content: "Последние работы";
+    }
+    &:nth-child(4)::before {
+      content: "Опыт";
+    }
+    &:nth-child(5)::before {
+      content: "Навыки";
+    }
+    &:nth-child(6)::before {
+      content: "Контакты";
+    }
+  }
+
+  svg {
+    width: 25px;
+    height: 20px;
+    fill: white;
+    margin-top: 5px;
+    transition: 0.4s;
+    // opacity: 0.8;
+  }
+}
+
+@keyframes svg_menu_anim {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1620px) {
+  .menu {
+    width: 80px;
+    height: 80px;
+  }
+  .hidden_menu {
+    top: 80px;
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .hidden_menu span {
+    height: 35px;
+    line-height: 35px;
+
+    &::before {
+      font-size: 14px;
+      padding: 0 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+
+  .hidden_menu {
+    span {
+      &::before {
+        display: block;
+        width: 140px;
+      }
+    }
+  }
+
+}
