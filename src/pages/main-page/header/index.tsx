@@ -4,7 +4,7 @@ import styles from './header.module.scss'
 import { IWithRefChildren } from '../index'
 
 import { Letter } from './letter.tsx'
-const conf = ['Hello!', 'I am', 'Vasilkov Dmitry', 'Frontend developer']
+const conf = ['Hello!', 'I am', 'Vasilkov Dmitrii', 'Frontend developer']
 
 export const Header: React.FC<IWithRefChildren> = ({ refElement }) => {
     const [count, setCount] = React.useState(0)

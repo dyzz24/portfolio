@@ -1,14 +1,17 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from 'react'
 
-export const useUnobserve = (refCollection: React.RefObject<HTMLDivElement>[], observer: IntersectionObserver | null) => {
+export const useUnobserve = (
+    refCollection: React.RefObject<HTMLDivElement>[],
+    observer: IntersectionObserver | null
+) => {
     useEffect(() => {
         return () => {
-            if(refCollection.length && observer) {
-                refCollection.forEach(parentElement => {
-                    if(parentElement.current) {
+            if (refCollection.length && observer) {
+                refCollection.forEach((parentElement) => {
+                    if (parentElement.current) {
                         observer?.unobserve(parentElement.current)
                     }
-                });
+                })
             }
         }
     }, [])

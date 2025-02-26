@@ -1,8 +1,4 @@
-import React, { useContext } from 'react'
-import {
-    PreloaderStore,
-    PreloaderStoreAction,
-} from '../../store/preloader-store'
+import React from 'react'
 
 export const FRRImg: React.FC<IFRRImg> = ({
     src,
@@ -12,7 +8,6 @@ export const FRRImg: React.FC<IFRRImg> = ({
     callback,
     alt,
 }) => {
-    const { dispatch } = useContext(PreloaderStore)
     return (
         <img
             useMap={useMap}
@@ -20,13 +15,9 @@ export const FRRImg: React.FC<IFRRImg> = ({
             alt={alt}
             data-render={true}
             style={style}
-            onLoad={() =>
-                dispatch({
-                    type: PreloaderStoreAction.SAFE_SRR_LOADED_RESOURCE,
-                })
-            }
             className={className}
             onClick={callback}
+            loading={'lazy'}
         />
     )
 }
