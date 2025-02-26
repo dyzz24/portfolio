@@ -15,11 +15,11 @@ export const MainPage = () => {
     usePreloader(dispatch)
 
     const menuProps = {
-        aboutRef: useRef<HTMLDivElement>(null),
-        experienceRef: useRef<HTMLDivElement>(null),
-        headerRef: useRef<HTMLDivElement>(null),
-        skillsRef: useRef<HTMLDivElement>(null),
-        worksRef: useRef<HTMLDivElement>(null),
+        aboutRef: useRef<HTMLDivElement | null>(null),
+        experienceRef: useRef<HTMLDivElement | null>(null),
+        headerRef: useRef<HTMLDivElement | null>(null),
+        skillsRef: useRef<HTMLDivElement | null>(null),
+        worksRef: useRef<HTMLDivElement | null>(null),
     }
 
     return (
@@ -38,5 +38,5 @@ export const MainPage = () => {
 }
 
 export interface IWithRefChildren {
-    refElement: React.RefObject<HTMLDivElement>
+    refElement: React.RefObject<HTMLDivElement | null>
 }

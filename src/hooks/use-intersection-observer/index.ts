@@ -20,7 +20,7 @@ export const useIntersectionObserver = <T>(
     React.useLayoutEffect(() => {
         if (ref.current && !!window.IntersectionObserver) {
             const intObserver = new IntersectionObserver(callback, option)
-            intObserver.observe(ref.current)
+            intObserver.observe(ref.current as unknown as Element)
             setObserver(intObserver)
         }
     }, [])

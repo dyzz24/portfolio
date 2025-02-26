@@ -1,4 +1,4 @@
-import React, { createRef, useContext, useEffect, useMemo } from 'react'
+import React from 'react'
 import './skills.scss'
 import { IWithRefChildren } from '../index'
 import { SkillsListItem } from './skills-list-item.tsx'
@@ -41,7 +41,7 @@ export const Skills: React.FC<IWithRefChildren> = ({ refElement }) => {
             <div className="all_skills">
                 {skillsConfig
                     .sort((a, b) => b.percent - a.percent)
-                    .map((el, idx) => (
+                    .map((el) => (
                         <SkillsListItem {...el} key={el.name} />
                     ))}
             </div>

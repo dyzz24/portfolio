@@ -72,7 +72,7 @@ export const Slider: React.FC<ISlider> = ({ slides }) => {
                     </div>
                 )}
                 <div className="slider_wrapper" ref={moveSliderRef}>
-                    {slides.map((el, idx) => (
+                    {slides.map((el) => (
                         <FRRImg
                             key={el}
                             alt={'slide'}
@@ -108,7 +108,7 @@ export const Slider: React.FC<ISlider> = ({ slides }) => {
 
             {slides.length > 1 && (
                 <div className="slider__btn_block">
-                    {slides.map((el, idx) => (
+                    {slides.map((_, idx) => (
                         <div
                             key={idx}
                             className={`slider_btn   ${idx === step ? 'active' : ''}`}

@@ -10,8 +10,8 @@ export const Menu: React.FC<IMenu> = ({
 }) => {
     const [open, setOpen] = useState(false)
 
-    const scrollToPosition = (ref: React.RefObject<HTMLDivElement>) => {
-        if (ref.current) {
+    const scrollToPosition = (ref: React.RefObject<HTMLDivElement | null>) => {
+        if (ref?.current && 'scrollIntoView' in ref.current) {
             ref.current.scrollIntoView({
                 behavior: 'smooth',
             })
@@ -153,9 +153,9 @@ export const Menu: React.FC<IMenu> = ({
 }
 
 interface IMenu {
-    headerRef: React.RefObject<HTMLDivElement>
-    aboutRef: React.RefObject<HTMLDivElement>
-    worksRef: React.RefObject<HTMLDivElement>
-    experienceRef: React.RefObject<HTMLDivElement>
-    skillsRef: React.RefObject<HTMLDivElement>
+    headerRef: React.RefObject<HTMLDivElement | null>
+    aboutRef: React.RefObject<HTMLDivElement | null>
+    worksRef: React.RefObject<HTMLDivElement | null>
+    experienceRef: React.RefObject<HTMLDivElement | null>
+    skillsRef: React.RefObject<HTMLDivElement | null>
 }

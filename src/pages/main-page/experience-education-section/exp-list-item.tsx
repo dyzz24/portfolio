@@ -7,8 +7,6 @@ const createMarkup = (html: string) => {
     return { __html: html }
 }
 
-let observer: IntersectionObserver | null = null
-
 export const ExpListItem: React.FC<ExperienceConfigType> = ({
     companyName,
     workPeriod,

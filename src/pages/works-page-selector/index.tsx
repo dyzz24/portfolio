@@ -1,13 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { useParams } from 'react-router'
 import { WorkPage } from './work-page'
 import { Routes } from '../../routes'
 import { projectsConfig } from './projects-config'
-import { PreloaderStore } from '../../store/preloader-store'
-import { usePreloader } from '../../hooks/use-preloading'
 
 export const WorksPageSelector = () => {
-    const params: { id: Routes } = useParams()
+    const params: { id: Routes } = useParams() as { id: Routes }
     const projectData = projectsConfig[params.id]
 
     if (!projectData) return null
