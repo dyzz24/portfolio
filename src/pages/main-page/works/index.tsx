@@ -12,11 +12,17 @@ import kngdy from '../../../img/kingdy.jpg'
 import mpoc from '../../../img/masteropc.jpg'
 import header from '../../../img/header.jpg'
 import laptop from '../../../img/laptop.webp'
-import fe from '../../../img/fe.webp'
 import { FRRImg } from '../../../components/FRRImg'
 import investing from '../../../img/investing.png'
+import softek from '../../../img/softek.png'
 
 const worksConfig = [
+    {
+        activeTitle: 'React, TS, GraphQL',
+        name: 'Access Digital® Banking',
+        linkTo: '',
+        labelImg: softek,
+    },
     {
         activeTitle: 'React, TS',
         name: 'Online platform for DomClick partners',

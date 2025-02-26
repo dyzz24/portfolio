@@ -1,8 +1,6 @@
 @use "../../../styles/_default" as *;
 @use '../../../styles/adaptive' as *;
 
-
-
 .skills_row {
   display: flex;
   width: 100%;
@@ -12,23 +10,8 @@
   padding-right: 50px;
   box-sizing: border-box;
   margin-bottom: 16px;
-  transition: 0.4s;
-
-  .name {
-    width: auto;
-    height: 100%;
-    background: var(--main-yellow-text-color);
-    font-size: 15px;
-    font-family: "Raleway-Medium";
-    color: #222831;
-    letter-spacing: 0px;
-    line-height: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    flex-shrink: 0;
-    padding: 0 16px;
-    font-weight: 700;
-  }
+  transition: 0.2s;
+  cursor: pointer;
 
   .progress_bar {
     width: 100%;
@@ -37,7 +20,7 @@
   }
 
   .fill {
-    width: 0%;
+    width: 0;
     height: 100%;
     background: #112437;
     transition: 0.4s;
@@ -99,6 +82,33 @@
   &:nth-child(13) .fill.fill_animation_class {
     animation: fill_grow 0.5s 2.6s linear forwards;
   }
+
+  &:hover .name {
+    width: 268px;
+  }
+}
+
+.name {
+  width: 25%;
+  height: 100%;
+  background: var(--main-yellow-text-color);
+  font-size: 12px;
+  font-family: "Raleway-Medium", serif;
+  color: #222831;
+  letter-spacing: 0;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  padding: 0 8px;
+  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: 0.2s;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 

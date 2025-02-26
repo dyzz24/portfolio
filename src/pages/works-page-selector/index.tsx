@@ -9,8 +9,6 @@ import { usePreloader } from '../../hooks/use-preloading'
 export const WorksPageSelector = () => {
     const params: { id: Routes } = useParams()
     const projectData = projectsConfig[params.id]
-    const { dispatch } = useContext(PreloaderStore)
-    usePreloader(dispatch)
 
     if (!projectData) return null
     return <WorkPage {...projectData} />

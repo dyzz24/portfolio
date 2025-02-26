@@ -374,12 +374,21 @@ section {
   }
 
   .experience__circle {
-    width: 10px;
+    transform: scaleX(0);
+    width: 100px;
     height: 10px;
     margin: 12px 0;
+    transform-origin: left;
+    border-radius: 6px;
+
   }
   .experience__line {
     width: 1px;
+  }
+
+  .experience__row .circle_grow_anim {
+    transform: scaleX(1);
+
   }
 
   .skills_row .fill {
@@ -482,10 +491,17 @@ section {
 
   .skills_row .name {
     font-size: 12px;
-    width: 120px;
+    width: auto;
+    position: static;
+
   }
   .skills_row {
     margin-bottom: 8px;
+
+    &:hover .name {
+      width: auto
+    }
+
   }
 
 
@@ -530,7 +546,7 @@ section {
 @media screen and (max-width: 440px) {
   .skills_row .name {
     font-size: 11px;
-    width: 100px;
+    width: auto;
   }
 }
 
