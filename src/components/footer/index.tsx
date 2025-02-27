@@ -50,7 +50,8 @@ export const Footer = () => {
             <img
                 className="arrow_up"
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                src={arrowUp}
+                src={arrowUp as string}
+                alt={'arrow up'}
             />
         </footer>
     )
