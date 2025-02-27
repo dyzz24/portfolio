@@ -15,6 +15,8 @@ import laptop from '../../../img/laptop.webp'
 import { FRRImg } from '../../../components/FRRImg'
 import investing from '../../../img/investing.png'
 import softek from '../../../img/softek.png'
+import dcCms from '../../../img/dc_cms.jpg'
+import dcPartners from '../../../img/dc_partners.jpg'
 
 const worksConfig = [
     {
@@ -27,13 +29,13 @@ const worksConfig = [
         activeTitle: 'React, TS',
         name: 'Online platform for DomClick partners',
         linkTo: '',
-        labelImg: laptop,
+        labelImg: dcPartners,
     },
     {
         activeTitle: 'React, TS, GraphQL',
         name: 'COMPAS 2.0 (crm system) DomClick',
         linkTo: '',
-        labelImg: laptop,
+        labelImg: dcCms,
     },
     {
         activeTitle: 'NEXT.JS, prototype',
