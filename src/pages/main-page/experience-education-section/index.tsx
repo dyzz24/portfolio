@@ -13,66 +13,69 @@ export type ExperienceConfigType = {
 
 const experienceConfig: ExperienceConfigType[] = [
     {
-        companyName: 'ООО ДомКлик, ПАО СБЕР',
-        workPeriod: 'Ноябрь 2021 - настоящее время',
-        workPosition: 'Senior Frontend Dev',
-        workDescription: 'Разработка вэб-приложений',
+        companyName: 'AccessSoftek INC',
+        workPeriod: 'August 2022 – Present',
+        workPosition: 'Senior Frontend Developer',
+        workDescription: 'Development of web applications.',
     },
     {
-        companyName: 'ООО Стрим, ПАО МТС',
-        workPeriod: 'Февраль 2020 - Ноябрь 2021',
-        workPosition: 'Frontend Dev',
-        workDescription: 'Разработка вэб-приложений для ПАО МТС',
+        companyName: 'DomClick LLC, Sber PJSC',
+        workPeriod: 'November 2021 – July 2022',
+        workPosition: 'Senior Frontend Developer',
+        workDescription: 'Development of web applications.',
     },
     {
-        companyName: 'АО «Крафтвэй корпорэйшн ПЛС»',
-        workPeriod: 'Апрель 2019 - Февраль 2020',
-        workPosition: 'Frontend Dev',
-        workDescription: `<p>Разработка вэб-приложения с использованием &nbsp;Angular &nbsp;6 &nbsp;версии</p>
-                                <p>Написание модулей приложения</p>
-                                <p>Оптимизация приложения</p>
-                                <p>Создание бизнес логики</p>`,
+        companyName: 'Stream LLC, MTS PJSC',
+        workPeriod: 'February 2020 – November 2021',
+        workPosition: 'Frontend Developer',
+        workDescription: 'Development of web applications for MTS PJSC.',
     },
     {
-        companyName: 'ООО Инсат',
-        workPeriod: 'Август 2018 - Апрель 2019',
-        workPosition: 'Верстальщик / Frontend Dev',
-        workDescription: `<p>Верстка и программирование сайтов компании по макетам из Figma&nbsp;и&nbsp;Photoshop.</p>
-                        <p>Верстка интерфейса основного продукта компании – MasterScada&nbsp;4</p>
-                        <p>Разработка клиентской части глобального проекта компании – CRM системы MasterCase на Angular&nbsp;7, работа в&nbsp;команде с&nbsp;
-                            дизайнером и&nbsp;backend программистом
-                        </p>`,
+        companyName: 'Kraftway Corporation PLC',
+        workPeriod: 'April 2019 – February 2020',
+        workPosition: 'Frontend Developer',
+        workDescription:
+            '<p>Development of a web application using Angular 6.</p> <p>Implementation of application modules.</p> <p>Application optimization.</p> <p>Creation of business logic.</p>',
+    },
+    {
+        companyName: 'Insat LLC',
+        workPeriod: 'August 2018 – April 2019',
+        workPosition: 'Markup Developer / Frontend Developer',
+        workDescription:
+            "<p>Website layout and development based on Figma and Photoshop designs.</p> <p>Interface layout for the company's main product, MasterScada 4.</p> <p>Frontend development for the company's large-scale project – the MasterCase CRM system on Angular 7, working collaboratively with a designer and backend developers.</p>",
     },
     {
         companyName: 'SoftlogicRus',
-        workPeriod: 'Май 2018 - август 2018',
-        workPosition: 'Верстальщик / Frontend Dev',
+        workPeriod: 'May 2018 – August 2018',
+        workPosition: 'Markup Developer / Frontend Developer',
         workDescription:
-            'Верстка web-приложений компании, написание логики на JS, адаптация под мобильные устройства.',
+            'Development of web application layouts, JavaScript logic implementation, and mobile responsiveness adaptation.',
     },
     {
-        companyName: 'Фриланс',
-        workPeriod: 'Март 2018 - май 2020',
-        workPosition: 'Верстальщик',
-        workDescription: 'Разработка сайтов на заказ',
+        companyName: 'Freelance',
+        workPeriod: 'March 2018 – May 2020',
+        workPosition: 'Markup Developer',
+        workDescription: 'Custom website development.',
     },
     {
-        companyName: 'Нерелевантный опыт работы',
-        workPeriod: '2014 - 2018',
+        companyName: 'Irrelevant Work Experience',
+        workPeriod: '2014 – 2018',
         workPosition: '',
         workDescription: '',
     },
     {
-        companyName: 'ИГХТУ',
-        workPeriod: '2015 - 2018',
-        workPosition: 'Студент',
-        workDescription: 'Магистратура, Экономика фирмы и отраслевых рынков',
+        companyName:
+            'Ivanovo State University of Chemistry and Technology (IGKhTU)',
+        workPeriod: '2015 – 2018',
+        workPosition: 'Student',
+        workDescription:
+            'Master’s Degree in Firm Economics and Industry Markets.',
     },
     {
-        companyName: 'ИвГПУ',
-        workPeriod: '2009 - 2014',
-        workPosition: 'Студент',
-        workDescription: 'Бакалавриат, Технология текстильных изделий',
+        companyName: 'Ivanovo State Polytechnic University (IvGPU)',
+        workPeriod: '2009 – 2014',
+        workPosition: 'Student',
+        workDescription: 'Bachelor’s Degree in Textile Technology.',
     },
 ]
 
