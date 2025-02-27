@@ -15,7 +15,7 @@ export const WorksPageSelector = () => {
 export interface IWorkPage {
     projectTitle: string
     projectDescription: string
-    slides: object[]
+    slides: string[]
     technologiesTitle: string
     technologiesList: string[]
     contributionsToProjectList: string[]
