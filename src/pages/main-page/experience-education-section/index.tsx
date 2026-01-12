@@ -16,52 +16,52 @@ const experienceConfig: ExperienceConfigType[] = [
         companyName: 'AccessSoftek INC',
         workPeriod: 'August 2022 – Present',
         workPosition: 'Senior Frontend Developer',
-        workDescription: 'Development of web applications.',
+        workDescription: 'Building and optimizing React and GraphQL banking web apps for enterprise clients.',
     },
     {
         companyName: 'DomClick LLC, Sber PJSC',
         workPeriod: 'November 2021 – July 2022',
         workPosition: 'Senior Frontend Developer',
-        workDescription: 'Development of web applications.',
+        workDescription: 'Delivered React-based customer and partner portals with performance and UX improvements.',
     },
     {
         companyName: 'Stream LLC, MTS PJSC',
         workPeriod: 'February 2020 – November 2021',
         workPosition: 'Frontend Developer',
-        workDescription: 'Development of web applications for MTS PJSC.',
+        workDescription: 'Built web applications for MTS digital products with a focus on reliability and UI quality.',
     },
     {
         companyName: 'Kraftway Corporation PLC',
         workPeriod: 'April 2019 – February 2020',
         workPosition: 'Frontend Developer',
         workDescription:
-            '<p>Development of a web application using Angular 6.</p> <p>Implementation of application modules.</p> <p>Application optimization.</p> <p>Creation of business logic.</p>',
+            '<p>Developed Angular 6 application modules.</p><p>Implemented business logic and optimized performance.</p><p>Collaborated on feature delivery and code quality.</p>',
     },
     {
         companyName: 'Insat LLC',
         workPeriod: 'August 2018 – April 2019',
         workPosition: 'Markup Developer / Frontend Developer',
         workDescription:
-            "<p>Website layout and development based on Figma and Photoshop designs.</p> <p>Interface layout for the company's main product, MasterScada 4.</p> <p>Frontend development for the company's large-scale project – the MasterCase CRM system on Angular 7, working collaboratively with a designer and backend developers.</p>",
+            "<p>Delivered pixel-perfect layouts from Figma and Photoshop.</p><p>Built interfaces for the MasterScada 4 product.</p><p>Implemented Angular 7 frontend for the MasterCase CRM with designers and backend engineers.</p>",
     },
     {
         companyName: 'SoftlogicRus',
         workPeriod: 'May 2018 – August 2018',
         workPosition: 'Markup Developer / Frontend Developer',
         workDescription:
-            'Development of web application layouts, JavaScript logic implementation, and mobile responsiveness adaptation.',
+            'Created responsive web layouts and JavaScript interactions for multiple client projects.',
     },
     {
         companyName: 'Freelance',
         workPeriod: 'March 2018 – May 2020',
         workPosition: 'Markup Developer',
-        workDescription: 'Custom website development.',
+        workDescription: 'Built custom websites end-to-end for small businesses.',
     },
     {
-        companyName: 'Irrelevant Work Experience',
+        companyName: 'Early Career',
         workPeriod: '2014 – 2018',
-        workPosition: '',
-        workDescription: '',
+        workPosition: 'Various roles',
+        workDescription: 'Non-IT roles (excluded from focus).',
     },
     {
         companyName:

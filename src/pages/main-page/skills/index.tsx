@@ -10,27 +10,27 @@ export type SkillConfig = {
 
 const skillsConfig: SkillConfig[] = [
     {
-        name: 'React / Next.JS / Redux',
+        name: 'React / Next.js / Redux Toolkit',
         percent: 90,
     },
     {
-        name: 'GraphQL Apollo / RestAPI / WS',
+        name: 'GraphQL (Apollo) / REST / WS',
         percent: 80,
     },
     {
-        name: 'CssInJs / SCSS / PCSS ',
+        name: 'CSS-in-JS / SCSS / PostCSS',
         percent: 85,
     },
     {
-        name: 'TS',
+        name: 'TypeScript',
         percent: 90,
     },
     {
-        name: 'Angular 5+ / RXJS',
+        name: 'Angular 5+ / RxJS',
         percent: 70,
     },
     {
-        name: 'Git / Vite / WebPack',
+        name: 'Git / Vite / Webpack',
         percent: 70,
     },
 ]

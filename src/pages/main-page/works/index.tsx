@@ -19,71 +19,71 @@ import dcPartners from '../../../img/dc_partners.jpg'
 
 const worksConfig = [
     {
-        activeTitle: 'React, TS, GraphQL',
-        name: 'Access Digital® Banking',
+        activeTitle: 'React · TypeScript · GraphQL',
+        name: 'Access Digital® Banking platform',
         linkTo: '',
         labelImg: softek,
     },
     {
-        activeTitle: 'React, TS',
-        name: 'Online platform for DomClick partners',
+        activeTitle: 'React · TypeScript',
+        name: 'DomClick partner portal',
         linkTo: '',
         labelImg: dcPartners,
     },
     {
-        activeTitle: 'React, TS, GraphQL',
-        name: 'COMPAS 2.0 (crm system) DomClick',
+        activeTitle: 'React · TypeScript · GraphQL',
+        name: 'COMPAS 2.0 CRM for DomClick',
         linkTo: '',
         labelImg: dcCms,
     },
     {
-        activeTitle: 'NEXT.JS, prototype',
-        name: "A tool for assessing the investment attractiveness of a company's shares",
+        activeTitle: 'Next.js prototype',
+        name: 'Investment attractiveness evaluator',
         externalReference:
             'https://investing-next-js.vercel.app/company-profile/AAPL',
         labelImg: investing,
     },
     {
-        activeTitle: 'NEXT.js - released, production',
-        name: "GOOD'OK music service from MTS",
+        activeTitle: 'Next.js · Production',
+        name: "GOOD'OK music service (MTS)",
         linkTo: Routes.GOODOK,
         labelImg: goodokLabel,
     },
     {
-        activeTitle: 'Beta version - released',
-        name: 'MVP Clients World',
+        activeTitle: 'Beta · Released',
+        name: 'Clients World MVP',
         linkTo: Routes.CLIENT_WORLD,
         labelImg: cwmtsLabel,
     },
     {
-        activeTitle: 'Angular 6, RXJs',
-        name: 'SPA (angular 6) Global System Monitoring',
+        activeTitle: 'Angular 6 · RxJS',
+        name: 'Global System Monitoring SPA',
         linkTo: Routes.GSM,
         labelImg: gsmLabel,
     },
     {
-        activeTitle: 'SRM System MasterCase',
-        name: 'Mail module + authorization module of CRM System MasterCase',
+        activeTitle: 'MasterCase SRM',
+        name: 'Mail & auth modules for MasterCase CRM',
         linkTo: Routes.CRM_SYSTEM,
         labelImg: msc,
     },
     {
-        name: "Website presentation of the company's main product - MasterScada",
+        name: 'MasterSCADA flagship product site',
         linkTo: '',
         labelImg: masterscada,
     },
     {
-        name: "Kingdy's partner site",
+        name: "Kingdy partner site",
         linkTo: '',
         labelImg: kngdy,
     },
     {
-        name: 'MasterOPC product presentation site',
+        name: 'MasterOPC product presentation',
         linkTo: '',
         labelImg: mpoc,
     },
     {
-        name: 'Website for installation of engineering systems and communications',
+        name: 'Engineering systems installation website',
         linkTo: '',
         labelImg: header,
         externalReference: 'http://engineer37.ru/',
@@ -123,7 +123,7 @@ export const Works: React.FC<IWithRefChildren> = ({ refElement }) => {
                                 className="work_btn btn_bottom"
                                 rel="noreferrer"
                             >
-                                <span>{el.externalReference}</span>
+                                <span>Open project</span>
                             </a>
                         )}
                     </div>
