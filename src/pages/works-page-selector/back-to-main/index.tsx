@@ -3,7 +3,7 @@ import {Routes} from "../../../routes";
 import React from "react";
 
 export const BackToMain = () => {
-    return <Link to={Routes.MAIN} className="back_menu" title="Назад">
+    return <Link to={Routes.MAIN} className="back_menu" title="Back">
         <i></i>
         <i></i>
         <i></i>

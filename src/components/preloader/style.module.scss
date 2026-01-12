@@ -5,20 +5,21 @@
   position: fixed;
   top: 0;
   z-index: 12;
-  background: rgba(15, 25, 38, 0.92);
+  background: rgba(12, 18, 28, 0.94);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
 }
 
 .preloader_title {
   font-family: 'Raleway-Medium', sans-serif;
-  font-size: 30px;
+  font-size: 28px;
   color: var(--main-text-white-color);
   margin-bottom: 32px;
   letter-spacing: 1px;
+  opacity: 0.9;
 }
 .loader .l_main{width:172px;height:128px;margin:0;}
 .l_square{position:relative}
@@ -26,7 +27,7 @@
 .l_square:nth-child(2){margin-left:44px}
 .l_square:nth-child(3){margin-left:88px}
 .l_square:nth-child(4){margin-left:132px}
-.l_square span{position:absolute;top:0px;left:20px;height:36px;width:36px;border-radius:6px;background-color:#FFFFFF;box-shadow:0 12px 28px rgba(0,0,0,0.2)}
+.l_square span{position:absolute;top:0px;left:20px;height:36px;width:36px;border-radius:10px;background-color:#ffffff;box-shadow:0 12px 28px rgba(0,0,0,0.18)}
 .l_square span:nth-child(1){top:0px}
 .l_square span:nth-child(2){top:44px}
 .l_square span:nth-child(3){top:88px}
