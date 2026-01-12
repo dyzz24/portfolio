@@ -9,9 +9,9 @@ export const Preloader = () => {
     if (state.FRRLoadedImgQuantityLeft <= 0) return null
 
     return (
-        <div className={styles.loader}>
-            <p className={styles.preloader_title}>Загрузка</p>
-            <div className={styles.l_main}>
+        <div className={styles.loader} aria-label="Loading">
+            <p className={styles.preloader_title}>Loading</p>
+            <div className={styles.l_main} role="status" aria-live="polite">
                 <div className={styles.l_square}>
                     <span></span>
                     <span></span>

@@ -27,11 +27,11 @@ export const MainPage = () => {
             <Menu {...menuProps} />
             <Header refElement={menuProps.headerRef} />
             <AboutSection refElement={menuProps.aboutRef} />
-            <Separator text={'Last works'} />
+            <Separator text={'Recent Work'} />
             <Works refElement={menuProps.worksRef} />
-            <Separator text={'Опыт работы / образование'} />
+            <Separator text={'Experience & Education'} />
             <ExperienceEducationSection refElement={menuProps.experienceRef} />
-            <Separator text={'Навыки'} />
+            <Separator text={'Skills'} />
             <Skills refElement={menuProps.skillsRef} />
         </div>
     )

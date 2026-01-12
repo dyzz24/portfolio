@@ -5,7 +5,7 @@ header {
   height: 100vh;
   display: flex;
   background: url('../../../img/header.jpg') no-repeat fixed center;
-  background-size: 100% 100%;
+  background-size: cover;
   position: relative;
   flex-direction: column;
   justify-content: center;
@@ -19,10 +19,10 @@ header {
     height: 100%;
     left: 0;
     top: 0;
-    background: #efbb35;
-    background: linear-gradient(to right, #0b1116, #112437);
-    opacity: 0.3;
+    background: linear-gradient(135deg, rgba(11, 17, 22, 0.82), rgba(17, 36, 55, 0.75));
+    opacity: 0.9;
     z-index: 1;
+    backdrop-filter: blur(2px);
   }
 
   .span_classes {
@@ -31,6 +31,8 @@ header {
     justify-content: center;
     align-items: center;
     margin-top: 36px;
+    padding: 0 24px;
+    box-sizing: border-box;
   }
 
   span {
@@ -43,10 +45,38 @@ header {
     box-sizing: border-box;
     user-select: none;
     font-family: "Raleway-Bold", serif;
+    text-shadow: 0 10px 24px rgba(0,0,0,0.35);
   }
 
   .colored {
     color: var(--main-yellow-text-color);
     font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    background-attachment: scroll;
+
+    span {
+      font-size: 38px;
+    }
+
+    .colored {
+      font-size: 44px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    span {
+      font-size: 30px;
+      padding: 0 6px;
+    }
+
+    .colored {
+      font-size: 34px;
+    }
   }
 }
