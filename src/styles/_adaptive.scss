@@ -294,8 +294,6 @@ section {
     top: 25%;
   }
 
-
-
   .right_skills_block {
     z-index: 1;
   }
@@ -370,7 +368,7 @@ section {
   }
 
   .experience__runner {
-    margin: 0 6px;
+    margin: 0;
   }
 
   .experience__circle {
@@ -401,6 +399,7 @@ section {
 
   .experience__name h2, .experience__more h3 {
     font-size: 18px !important;
+    margin: 6px 0;
   }
 
 

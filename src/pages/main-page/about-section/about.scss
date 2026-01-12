@@ -2,12 +2,13 @@
 
 h2 {
   @include h2_txt(32px, 4px);
+  color: var(--main-text-white-color);
 }
 
 .about {
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(135deg, #1e2530 0%, #252934 40%, #1b202a 100%);
+  background: linear-gradient(135deg, rgba(13, 19, 28, 0.9) 0%, rgba(17, 24, 38, 0.95) 40%, rgba(11, 15, 24, 0.9) 100%);
   display: flex;
   flex-direction: column;
 
@@ -41,13 +42,14 @@ h2 {
   margin-top: 32px;
   padding: 24px;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.02);
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.25);
+  background: var(--surface-color);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-subtle);
 }
 
 .line_l {
   width: 10%;
-  background: var(--main-yellow-text-color);
+  background: linear-gradient(135deg, var(--main-yellow-text-color), #9ae2ff);
   height: 3px;
   flex-shrink: 0;
   margin-right: 16px;
@@ -60,10 +62,10 @@ h2 {
   display: flex;
   flex-direction: column;
   font-family: "Raleway-Regular";
-  font-size: 20px;
+  font-size: 19px;
   color: var(--main-text-white-color);
-  line-height: 1.5;
-  gap: 14px;
+  line-height: 1.65;
+  gap: 16px;
 
   span {
     margin-bottom: 0;
@@ -76,7 +78,7 @@ h2 {
   }
 
   .about__text_body {
-    padding: 20px;
+    padding: 24px;
   }
 
   .text_block {
