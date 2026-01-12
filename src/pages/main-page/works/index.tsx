@@ -17,7 +17,15 @@ import softek from '../../../img/softek.png'
 import dcCms from '../../../img/dc_cms.jpg'
 import dcPartners from '../../../img/dc_partners.jpg'
 
-const worksConfig = [
+type WorkItem = {
+    name: string
+    activeTitle?: string
+    linkTo?: string
+    externalReference?: string
+    labelImg: string
+}
+
+const worksConfig: WorkItem[] = [
     {
         activeTitle: 'React · TypeScript · GraphQL',
         name: 'Access Digital® Banking platform',
@@ -69,25 +77,25 @@ const worksConfig = [
     },
     {
         name: 'MasterSCADA flagship product site',
-        activeTitle: 'Site',
+        activeTitle: 'Product site',
         linkTo: '',
         labelImg: masterscada,
     },
     {
         name: "Kingdy partner site",
-        activeTitle: 'Site',
+        activeTitle: 'Partner site',
         linkTo: '',
         labelImg: kngdy,
     },
     {
         name: 'MasterOPC product presentation',
-        activeTitle: 'Site',
+        activeTitle: 'Product site',
         linkTo: '',
         labelImg: mpoc,
     },
     {
         name: 'Engineering systems installation website',
-        activeTitle: 'Site',
+        activeTitle: 'Corporate site',
         linkTo: '',
         labelImg: header,
         externalReference: 'http://engineer37.ru/',
@@ -95,14 +103,14 @@ const worksConfig = [
 ]
 
 export const Works: React.FC<IWithRefChildren> = ({ refElement }) => {
-    const works = React.useMemo(() => worksConfig, [])
+    const works = React.useMemo<WorkItem[]>(() => worksConfig, [])
 
     return (
         <section className="work_section" ref={refElement}>
             <div className={'workWrapper'}>
                 {works.map((el) => (
                     <div className={'work__prev'} key={el.name}>
-                        <FRRImg src={el.labelImg as string} />
+                        <FRRImg src={el.labelImg as string} alt={el.name} />
                         {el.activeTitle && (
                             <div className="work_title active">
                                 {el.activeTitle}

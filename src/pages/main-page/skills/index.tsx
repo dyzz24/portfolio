@@ -36,7 +36,7 @@ const skillsConfig: SkillConfig[] = [
 ]
 
 export const Skills: React.FC<IWithRefChildren> = ({ refElement }) => {
-    const orderedSkills = React.useMemo(
+    const orderedSkills = React.useMemo<SkillConfig[]>(
         () => [...skillsConfig].sort((a, b) => b.percent - a.percent),
         []
     )
