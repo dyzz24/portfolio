@@ -174,7 +174,7 @@
   border-radius: 10px;
   font-family: "Raleway-Bold";
   font-size: 16px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(125, 215, 255, 0.14);
   margin-right: 3px;
   cursor: pointer;
   position: relative;
@@ -240,4 +240,3 @@
   height: 100%;
   z-index: 2;
 }
-

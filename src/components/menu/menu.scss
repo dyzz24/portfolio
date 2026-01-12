@@ -90,10 +90,6 @@
       fill: var(--main-yellow-text-color);
     }
 
-    &:hover::before {
-      display: block;
-    }
-
     &::before {
       content: "";
       font-family: "Raleway-Regular";
@@ -111,6 +107,7 @@
       display: none;
       border-radius: 8px 0 0 8px;
       box-shadow: -6px 8px 20px rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--border-subtle);
     }
 
     &:nth-child(1)::before {

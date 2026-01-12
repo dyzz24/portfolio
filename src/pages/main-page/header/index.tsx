@@ -12,7 +12,10 @@ export const Header: React.FC<IWithRefChildren> = ({ refElement }) => {
     const spanAnim = () => {
         if (!refElement.current) return
         const { top, bottom, height } =
-            refElement.current.getBoundingClientRect()
+            refElement.current.getBoundingClientRect();
+
+        if(bottom <= 0) return;
+
 
         if (top < 0) {
             const calculated = Math.round(100 - (bottom * 100) / height)

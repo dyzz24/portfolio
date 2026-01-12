@@ -69,21 +69,25 @@ const worksConfig = [
     },
     {
         name: 'MasterSCADA flagship product site',
+        activeTitle: 'Site',
         linkTo: '',
         labelImg: masterscada,
     },
     {
         name: "Kingdy partner site",
+        activeTitle: 'Site',
         linkTo: '',
         labelImg: kngdy,
     },
     {
         name: 'MasterOPC product presentation',
+        activeTitle: 'Site',
         linkTo: '',
         labelImg: mpoc,
     },
     {
         name: 'Engineering systems installation website',
+        activeTitle: 'Site',
         linkTo: '',
         labelImg: header,
         externalReference: 'http://engineer37.ru/',

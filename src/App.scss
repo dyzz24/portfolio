@@ -2,8 +2,12 @@
 
 :root {
   --main-text-white-color: #f4f6ef;
-  --main-yellow-text-color: #efbb35;
-  --gradient-background: linear-gradient(to right, #252934, #112437);
+  --main-yellow-text-color: #7dd7ff;
+  --surface-color: rgba(22, 30, 44, 0.9);
+  --surface-elevated: rgba(30, 42, 60, 0.88);
+  --gradient-background: radial-gradient(circle at 20% 25%, rgba(125, 215, 255, 0.12), rgba(112, 96, 255, 0.08) 38%, transparent 55%),
+    radial-gradient(circle at 80% 15%, rgba(255, 159, 124, 0.12), rgba(125, 215, 255, 0.06) 36%, transparent 55%),
+    linear-gradient(145deg, #0f1723 0%, #0d1828 45%, #0b0f1b 100%);
 }
 
 body {
