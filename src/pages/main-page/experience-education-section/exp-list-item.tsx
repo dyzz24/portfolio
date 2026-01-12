@@ -17,11 +17,7 @@ export const ExpListItem: React.FC<ExperienceConfigType> = ({
     const [isIntersecting, setIsIntersecting] = useState(false)
     const onObserver = (entries: IntersectionObserverEntry[]) => {
         entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                setIsIntersecting(true)
-            } else {
-                setIsIntersecting(false)
-            }
+            setIsIntersecting(entry.isIntersecting)
         })
     }
 

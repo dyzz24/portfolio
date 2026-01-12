@@ -91,21 +91,23 @@ const worksConfig = [
 ]
 
 export const Works: React.FC<IWithRefChildren> = ({ refElement }) => {
+    const works = React.useMemo(() => worksConfig, [])
+
     return (
         <section className="work_section" ref={refElement}>
             <div className={'workWrapper'}>
-                {worksConfig.map((el) => (
+                {works.map((el) => (
                     <div className={'work__prev'} key={el.name}>
                         <FRRImg src={el.labelImg as string} />
-                        {el?.activeTitle && (
+                        {el.activeTitle && (
                             <div className="work_title active">
-                                {el?.activeTitle}
+                                {el.activeTitle}
                             </div>
                         )}
                         <div className="work_tech_block">
                             <p>{el.name}</p>
                         </div>
-                        {el?.linkTo && (
+                        {el.linkTo && (
                             <Link
                                 to={el.linkTo}
                                 className="work_btn btn_bottom"
@@ -113,10 +115,10 @@ export const Works: React.FC<IWithRefChildren> = ({ refElement }) => {
                                 <span>More</span>
                             </Link>
                         )}
-                        {el?.linkTo && (
+                        {el.linkTo && (
                             <Link to={el.linkTo} className="prev_link"></Link>
                         )}
-                        {el?.externalReference && (
+                        {el.externalReference && (
                             <a
                                 href={el.externalReference}
                                 target={'_blank'}

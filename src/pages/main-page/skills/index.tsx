@@ -36,14 +36,17 @@ const skillsConfig: SkillConfig[] = [
 ]
 
 export const Skills: React.FC<IWithRefChildren> = ({ refElement }) => {
+    const orderedSkills = React.useMemo(
+        () => [...skillsConfig].sort((a, b) => b.percent - a.percent),
+        []
+    )
+
     return (
         <section className="my_skills" ref={refElement}>
             <div className="all_skills">
-                {skillsConfig
-                    .sort((a, b) => b.percent - a.percent)
-                    .map((el) => (
-                        <SkillsListItem {...el} key={el.name} />
-                    ))}
+                {orderedSkills.map((el) => (
+                    <SkillsListItem {...el} key={el.name} />
+                ))}
             </div>
             <div className="right_skills_block">
                 <div className="graph_triangle triangle_anim">

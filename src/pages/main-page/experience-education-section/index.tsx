@@ -85,7 +85,7 @@ export const ExperienceEducationSection: React.FC<IWithRefChildren> = ({
     return (
         <section className="experience" ref={refElement}>
             {experienceConfig.map((el) => (
-                <ExpListItem {...el} />
+                <ExpListItem {...el} key={`${el.companyName}-${el.workPeriod}`} />
             ))}
         </section>
     )
