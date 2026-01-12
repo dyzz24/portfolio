@@ -12,36 +12,26 @@ export const AboutSection: React.FC<IWithRefChildren> = ({ refElement }) => {
                         <span className="line_l"></span>
                         <div className="text_block">
                             <span>
-                                I am a dedicated Frontend Developer with 6+
-                                years of experience in building dynamic,
-                                scalable, and user-friendly web applications.
-                                Proficient in React and Angular, I have
-                                experience developing robust solutions and
-                                optimizing user experiences. I am also ready to
-                                work with modern Angular, leveraging my
-                                expertise in the framework.
+                                I am a senior Frontend Developer with 6+ years of
+                                experience building performant, accessible web
+                                applications that scale.
                             </span>
                             <span>
-                                I specialize in TypeScript, React, React Router,
-                                Next.js, Redux Toolkit, Effector, and Apollo
-                                GraphQL. I ensure high code quality by writing
-                                tests with Jest and React Testing Library,
-                                maintaining over 80% test coverage
+                                My toolkit centers on TypeScript, React, Next.js,
+                                Redux Toolkit, and GraphQL; I pair these with
+                                robust testing using Jest and React Testing
+                                Library.
                             </span>
                             <span>
-                                My skill set includes CSS preprocessors (SCSS),
-                                PCSS, and CSS-in-JS libraries (Styled
-                                Components), along with experience using build
-                                tools like Webpack and Vite.
+                                I’m comfortable across styling approaches—SCSS,
+                                PostCSS, CSS-in-JS—and modern build tooling like
+                                Vite and Webpack.
                             </span>
                             <span>
-                                I actively incorporate AI tools like GitHub
-                                Copilot and ChatGPT to streamline development,
-                                improve efficiency, and optimize workflows.
-                                Additionally, I develop library packages with
-                                reusable components, such as react-tree-select
-                                and react-toaster. Feel free to contact me via
-                                Telegram: @VDmitry24.
+                                I regularly use AI assistants such as GitHub
+                                Copilot and ChatGPT to accelerate delivery and
+                                maintain quality. Let’s talk if you need someone
+                                who ships clean, reliable UI.
                             </span>
                         </div>
                     </div>
